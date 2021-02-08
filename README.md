@@ -8,6 +8,10 @@ This full stack MERN application allows users to browse a list of private island
 
 [Click to view Whimsical](https://whimsical.com/p3-valhalla-UB6fmNiCVZ8fvwW4SZkdcx)
 
+## Wireframes
+
+<img src="https://user-images.githubusercontent.com/22455354/107276728-71c2f800-6a21-11eb-9fbc-8ec82bd573a1.jpg">
+
 ## Team Expectations
 
 [Click to view team expectations](https://docs.google.com/document/d/1KEHPc6DgyiDW16G-FWy7QTTfUvIp7S4hKOQ1IDcrIRM/edit?usp=sharing)
@@ -21,14 +25,14 @@ This full stack MERN application allows users to browse a list of private island
 ##### Product
 
 ```
-const Product = new Schema(
+const Listing = new Schema(
   {
-    title: { type: String, required: true },
+    name: { type: String, required: true },
     imgURL: { type: String, required: true },
     description: { type: String, required: true },
-    price: { type: Nnumber, required: true },
+    price: { type: Number, required: true },
     location: {type: String, required: true},
-    author: {type: String, required: true },
+
   },
   { timestamps: true }
 )
