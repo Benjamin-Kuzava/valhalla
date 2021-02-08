@@ -6,6 +6,8 @@ This full stack MERN application allows users to browse a list of private island
 
 ## Whimsical Diagram
 
+[Click to view Whimsical](https://whimsical.com/p3-valhalla-UB6fmNiCVZ8fvwW4SZkdcx)
+
 ## Team Expectations
 
 [Click to view team expectations](https://docs.google.com/document/d/1KEHPc6DgyiDW16G-FWy7QTTfUvIp7S4hKOQ1IDcrIRM/edit?usp=sharing)
