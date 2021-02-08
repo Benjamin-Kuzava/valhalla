@@ -19,7 +19,17 @@ This full stack MERN application allows users to browse a list of private island
 ##### Product
 
 ```
-
+const Product = new Schema(
+  {
+    title: { type: String, required: true },
+    imgURL: { type: String, required: true },
+    description: { type: String, required: true },
+    price: { type: Nnumber, required: true },
+    location: {type: String, required: true},
+    author: {type: String, required: true },
+  },
+  { timestamps: true }
+)
 ```
 
 ##### User
@@ -53,3 +63,4 @@ const User = new Schema(
 - Experiment with pop-ups, modals, and adding branding
 - Refactor nav to be a two-part component
 - UseContext for user
+- Experiment with mapbox api
