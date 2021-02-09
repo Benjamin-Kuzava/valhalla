@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
+import { UserContext } from "../../../utilities/userContext";
 
 const staticOptions = (
   <>
@@ -23,8 +24,8 @@ const authenticatedOptions = (
   </>
 );
 
-const Nav = (props) => {
-  const { user } = props;
+const Nav = () => {
+  const { user } = useContext(UserContext);
   const [isClicked, setIsClicked] = useState(false);
 
   return (
@@ -33,15 +34,14 @@ const Nav = (props) => {
         <NavLink to="/">
           <h1 className="title">Valhalla</h1>
         </NavLink>
-        <div className="info-links">
-          {staticOptions}
-          </div>
+        <div className="info-links">{staticOptions}</div>
       </div>
       <div className="login">
         <div>
           Login
           <i className="fas fa-caret-down"></i>
         </div>
+        {user ? <NavLink to="/">{user}</NavLink> : null}
         {/* {user ? authenticatedOptions : unauthenticatedOptions} */}
         <i class="fas fa-user-circle"></i>
       </div>
