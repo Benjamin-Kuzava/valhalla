@@ -2,7 +2,7 @@ import api from "./apiConfig";
 
 export const getListings = async () => {
   try {
-    const response = await applicationCache.get("/listings");
+    const response = await api.get("/listings");
     return response.data;
   } catch (error) {
     throw error;
@@ -20,7 +20,7 @@ export const getListing = async (id) => {
 
 export const createListing = async (listing) => {
   try {
-    const response = await api.post("/products", product);
+    const response = await api.post("/listings", listing);
     return response.data;
   } catch (error) {
     throw error;
