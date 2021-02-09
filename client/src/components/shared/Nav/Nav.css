@@ -12,23 +12,43 @@
 
 .logo-info {
   display: flex;
-  align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 33vw;
 }
-
 .navbar a {
   text-decoration: none;
   color: white;
   cursor: pointer;
+  font-size: 1.25rem;
+
 }
+.info-links {
+  display: flex;
+  justify-content: space-between;
+  width: 15vw;
+}
+
+.title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.7rem;
+  letter-spacing: .1em;
+}
+
+
 
 .login {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 4vw;
+  width: 8vw;
   font-size: 1.25rem;
 }
 
 .fa-user-circle {
   font-size: 2rem;
+}
+
+.fa-caret-down {
+margin-left: 10px;
 }

@@ -31,9 +31,11 @@ const Nav = (props) => {
     <nav className="navbar">
       <div className="logo-info">
         <NavLink to="/">
-          <h1>Valhalla</h1>
+          <h1 className="title">Valhalla</h1>
         </NavLink>
-        {staticOptions}
+        <div className="info-links">
+          {staticOptions}
+          </div>
       </div>
       <div className="login">
         <div>
