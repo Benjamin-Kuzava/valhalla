@@ -1,11 +1,14 @@
 import React from "react";
+import Layout from "../../components/shared/Layout/Layout";
 import "./SignUp.css";
 
 const SignUp = () => {
   return (
-    <div>
-      <h1>SignUp</h1>
-    </div>
+    <Layout>
+      <div>
+        <h1>SignUp</h1>
+      </div>
+    </Layout>
   );
 };
 
