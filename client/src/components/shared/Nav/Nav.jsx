@@ -1,37 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.css";
-import { NavLink } from "react-router-dom";
+import { NavLink as div } from "react-router-dom";
 
-const alwaysShown = (
+const staticOptions = (
   <>
-    <NavLink to="/listings">Buy</NavLink>
-    <NavLink to="/about">About</NavLink>
+    <div to="/listings">Buy</div>
+    <div to="/add-listing">Sell</div>
+    <div to="/about">About</div>
   </>
 );
 
 const unauthenticatedOptions = (
   <>
-    <NavLink to="/sign-in">Sign In</NavLink>
-    <NavLink to="/sign-up">Sign Up</NavLink>
+    <div to="/sign-in">Sign In</div>
+    <div to="/sign-up">Sign Up</div>
   </>
 );
 
 const authenticatedOptions = (
   <>
-    <NavLink to="/add-listing">Sell</NavLink>
-    <NavLink to="/sign-out">Sign Out</NavLink>
+    <div to="/sign-out">Sign Out</div>
   </>
 );
 
 const Nav = (props) => {
   const { user } = props;
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <nav>
-      <NavLink to="/">Valhalla</NavLink>
-      <div className="links">
-        {alwaysShown}
-        {user ? authenticatedOptions : unauthenticatedOptions}
+    <nav className="navbar">
+      <div className="logo-info">
+        <div to="/">
+          <h1>Valhalla</h1>
+        </div>
+        {staticOptions}
+      </div>
+      <div className="login">
+        <div>
+          Login
+          <i className="fas fa-caret-down"></i>
+          {/* {user ? authenticatedOptions : unauthenticatedOptions} */}
+        </div>
+        <i class="fas fa-user-circle"></i>
       </div>
     </nav>
   );
