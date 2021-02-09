@@ -37,12 +37,12 @@ const Nav = () => {
         <div className="info-links">{staticOptions}</div>
       </div>
       <div className="login">
-        <div>
+        {/* <div>
           Login
           <i className="fas fa-caret-down"></i>
-        </div>
+        </div> */}
         {user ? <NavLink to="/">{user}</NavLink> : null}
-        {/* {user ? authenticatedOptions : unauthenticatedOptions} */}
+        {user ? authenticatedOptions : unauthenticatedOptions}
         <i class="fas fa-user-circle"></i>
       </div>
     </nav>
