@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import "./Nav.css";
-import { NavLink as div } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const staticOptions = (
   <>
-    <div to="/listings">Buy</div>
-    <div to="/add-listing">Sell</div>
-    <div to="/about">About</div>
+    <NavLink to="/listings">Buy</NavLink>
+    <NavLink to="/add-listing">Sell</NavLink>
+    <NavLink to="/about">About</NavLink>
   </>
 );
 
 const unauthenticatedOptions = (
   <>
-    <div to="/sign-in">Sign In</div>
-    <div to="/sign-up">Sign Up</div>
+    <NavLink to="/sign-in">Sign In</NavLink>
+    <NavLink to="/sign-up">Sign Up</NavLink>
   </>
 );
 
 const authenticatedOptions = (
   <>
-    <div to="/sign-out">Sign Out</div>
+    <NavLink to="/sign-out">Sign Out</NavLink>
   </>
 );
 
@@ -30,17 +30,17 @@ const Nav = (props) => {
   return (
     <nav className="navbar">
       <div className="logo-info">
-        <div to="/">
+        <NavLink to="/">
           <h1>Valhalla</h1>
-        </div>
+        </NavLink>
         {staticOptions}
       </div>
       <div className="login">
         <div>
           Login
           <i className="fas fa-caret-down"></i>
-          {/* {user ? authenticatedOptions : unauthenticatedOptions} */}
         </div>
+        {/* {user ? authenticatedOptions : unauthenticatedOptions} */}
         <i class="fas fa-user-circle"></i>
       </div>
     </nav>
