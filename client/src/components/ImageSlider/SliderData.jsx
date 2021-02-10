@@ -12,6 +12,6 @@ export const sliderData = [
   },
   {
     image:
-      "https://www.wallpapers13.com/wp-content/uploads/2019/01/Bora-Bora-Island-Beautiful-Places-French-Polynesia-South-Pacific-island-northwest-of-Tahiti-HD-Desktop-Wallpapers-3840x2400-.jpg",
+      "https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701670781.jpg",
   },
 ];
