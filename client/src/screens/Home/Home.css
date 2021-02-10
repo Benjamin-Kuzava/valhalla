@@ -1,4 +1,38 @@
-.home-container {
-  background-color: greenyellow;
-  border: 2px solid blue;
+#home-container {
+}
+.slider-container {
+}
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35em;
+}
+.about-info-container {
+  height: 20em;
+  width: 20em;
+  background-color: #48b6a9;
+}
+.about-container p {
+  font-size: 1.4rem;
+  max-width: 20em;
+  margin-left: 15em;
+}
+.branding-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #48b6a9;
+  height: 35em;
+}
+.branding-info-container {
+  height: 20em;
+  width: 20em;
+  background-color: white;
+}
+.branding-container p {
+  font-size: 1.4rem;
+  max-width: 20em;
+  margin-right: 15em;
+  color: white;
 }
