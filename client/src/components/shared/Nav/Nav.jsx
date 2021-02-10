@@ -3,6 +3,11 @@ import { NavLink } from "react-router-dom";
 import Dropdown from "../Dropdown/Dropdown";
 import "./Nav.css";
 
+const activeStyle = {
+  fontWeight: "800",
+  color: "#f4a261",
+};
+
 const Nav = ({ user }) => {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
@@ -11,19 +16,11 @@ const Nav = ({ user }) => {
   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
+    setDropdown(window.innerWidth > 960 ? true : false);
   };
 
   const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
+    setDropdown(false);
   };
 
   return (
@@ -32,31 +29,40 @@ const Nav = ({ user }) => {
         <NavLink to="/" className="navbar-logo">
           <h1>Valhalla</h1>
         </NavLink>
+
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
+
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
-            <NavLink to="/" className="nav-links" onClick={closeMobileMenu}>
+          <li className="nav-item nav-hover">
+            <NavLink
+              to="/listings"
+              className="nav-links"
+              onClick={closeMobileMenu}
+              activeStyle={activeStyle}
+            >
               Buy
             </NavLink>
           </li>
 
-          <li className="nav-item">
+          <li className="nav-item nav-hover">
             <NavLink
-              to="/services"
+              to="/add-listing"
               className="nav-links"
               onClick={closeMobileMenu}
+              activeStyle={activeStyle}
             >
               Sell
             </NavLink>
           </li>
 
-          <li className="nav-item">
+          <li className="nav-item nav-hover">
             <NavLink
-              to="/contact-us"
+              to="/about"
               className="nav-links"
               onClick={closeMobileMenu}
+              activeStyle={activeStyle}
             >
               About
             </NavLink>
@@ -72,6 +78,7 @@ const Nav = ({ user }) => {
             </NavLink>
           </li>
         </ul>
+
         <li
           className="nav-item login toggle"
           onMouseEnter={onMouseEnter}
