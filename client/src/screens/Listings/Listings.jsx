@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import "./Listings.css";
 import { getListings } from "../../services/listings";
+import ListingCards from "../../components/ListingCards/ListingCards";
 
 const Listings = (props) => {
   const [allListings, setAllListings] = useState([]);
@@ -15,8 +16,8 @@ const Listings = (props) => {
   }, []);
   return (
     <Layout user={props.user}>
-      <div>
-        <h1>Listings</h1>
+      <div >
+      <ListingCards />
       </div>
     </Layout>
   );

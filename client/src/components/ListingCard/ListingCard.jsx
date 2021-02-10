@@ -6,10 +6,10 @@ const ListingCard = (props) => {
 
   return (
     <div className="listing-div">
-      <img src={imgURL} />
-      <h1>{name}</h1>
-      <h2>{price }</h2>
-    </div>
+      <img className="img-listing" src={imgURL}></img>
+      <h1 className="h1-listing">{name}</h1>
+        <h3 className="h3-listing">{price}</h3>
+  </div>
   );
 };
 

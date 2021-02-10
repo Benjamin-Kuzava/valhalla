@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import ListingCard from "../../ListingCard/ListingCard";
 import Dropdown from "../Dropdown/Dropdown";
 import "./Nav.css";
 

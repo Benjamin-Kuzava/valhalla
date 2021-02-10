@@ -16,7 +16,7 @@ const main = async () => {
     {
       name: "Kakatoa Island",
       imgURL:
-        "https://imahttps://images.pexels.com/photos/1268869/pexels-photo-1268869.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500ges.unsplash.com/photo-1576594496020-534bf2437b21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+        "https://images.pexels.com/photos/1268860/pexels-photo-1268860.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500ps://images.unsplash.com/photo-1573521193826-58c7dc2e13e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
       description:
         "An entire 55 acre private island including Key West styled development for sale in The Bahamas. After several years spent diligently gaining the necessary government approvals, duty exemptions and lanning permissions, the freehold of this pristine island is now offered for sale.",
       price: "1.7 Million USD",

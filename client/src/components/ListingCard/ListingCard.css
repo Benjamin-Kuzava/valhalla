@@ -1,0 +1,46 @@
+
+.listing-div{
+ display: flex;
+ flex-direction: column;
+ position: relative;
+}
+
+.img-listing {
+  display: flex;
+  height: 400px;
+  width: 600px;
+}
+
+.h1-listing {
+  display: flex;
+  position: relative;
+  bottom: 100px;
+  left: 100px;
+  font-size: 35px;
+  color: white;
+  font-weight: 1000px;
+  font-family: "Roboto";
+  text-shadow: 2px 3px 2px hsl(8, 95%, 49%);
+  
+  }
+
+.h3-listing {
+  display: flex;
+  position: relative;
+  bottom: 100px;
+  left: 100px;
+  font-size: 25px;
+  color: white;
+  font-weight: 1000px;
+  font-family: "Roboto";
+  text-shadow: 2px 3px 2px hsl(238, 90%, 49%);
+  
+}
+
+:root {
+  -clr-main-blue: #456471;
+  -clr-light-blue: #2a9d8f;
+  -clr-yellow: #e9c46a;
+  -clr-dark-orange: #f4a261;
+  -clr-light-orange: #e76f51;
+}
