@@ -6,7 +6,7 @@ import "./Layout.css";
 const Layout = (props) => {
   return (
     <div className="layout-children">
-      <Nav />
+      <Nav user={props.user} />
       {/* screens go below */}
       {props.children}
       <Footer />

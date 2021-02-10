@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
-import { UserContext } from "../../../utilities/userContext";
+//import { UserContext } from "../../../utilities/userContext";
 
 const staticOptions = (
   <>
@@ -24,8 +24,8 @@ const authenticatedOptions = (
   </>
 );
 
-const Nav = () => {
-  const { user } = useContext(UserContext);
+const Nav = ({ user }) => {
+  //const { user } = useContext(UserContext);
   const [isClicked, setIsClicked] = useState(false);
 
   return (
@@ -41,7 +41,7 @@ const Nav = () => {
           Login
           <i className="fas fa-caret-down"></i>
         </div> */}
-        {user ? <NavLink to="/">{user}</NavLink> : null}
+        {/* {user ? <NavLink to="/">{user}</NavLink> : null} */}
         {user ? authenticatedOptions : unauthenticatedOptions}
         <i class="fas fa-user-circle"></i>
       </div>

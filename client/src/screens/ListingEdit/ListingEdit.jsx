@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import "./ListingEdit.css";
 
-const ListingEdit = () => {
+const ListingEdit = (props) => {
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div>
         <h1>Edit</h1>
       </div>
