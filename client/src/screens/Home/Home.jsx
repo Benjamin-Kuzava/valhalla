@@ -13,20 +13,30 @@ const Home = (props) => {
         </div>
         <div className="about-container">
           <div className="about-info-container"></div>
-          <p>
-            we sell islands because why not? Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Neque, reprehenderit alias ullam non
-            perspiciatis fugit odio aliquid itaque sint dolor beatae sed?
-            Voluptatem dicta, consequuntur deleniti adipisci a dolores cumque.
-          </p>
+          <div className="about-info">
+            <h2>What makes us different?</h2>
+            <p>
+              we sell islands because why not? Lorem ipsum dolor, sit amet
+              consectetur adipisicing elit. Neque,{" "}
+              <span className="highlight-light">reprehenderit alias</span> ullam
+              non perspiciatis fugit odio aliquid itaque sint dolor beatae sed?
+              Voluptatem dicta, consequuntur deleniti adipisci a dolores cumque.
+            </p>
+          </div>
         </div>
-        <div className="branding-container">
-          <p>
-            branding info buy an island beacuse all the cool rich people are
-            doing it. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Enim ab ratione impedit atque itaque laudantium.
-          </p>
-          <div className="branding-info-container"></div>
+        <div className="explore-container">
+          <div className="explore-info">
+            <h2>Explore islands you'll never afford</h2>
+            <p>
+              branding info buy an island beacuse all the cool rich people are
+              doing it. Lorem{" "}
+              <span className="highlight-dark">ipsum dolor sit amet</span>{" "}
+              consectetur adipisicing elit. Enim ab ratione impedit atque itaque
+              laudantium.
+            </p>
+            <button className="explore-button">Explore</button>
+          </div>
+          <div className="explore-info-container"></div>
         </div>
       </div>
     </Layout>

@@ -11,28 +11,82 @@
 .about-info-container {
   height: 20em;
   width: 20em;
-  background-color: #48b6a9;
+  background-color: #f4a261;
+  background-image: url(https://images.unsplash.com/photo-1548032885-b5e38734688a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=907&q=80);
+  background-size: cover;
+  box-shadow: -10px 10px 20px #f4a261;
 }
+
+.about-info {
+  margin-left: 15em;
+}
+
 .about-container p {
   font-size: 1.4rem;
   max-width: 20em;
-  margin-left: 15em;
 }
-.branding-container {
+
+.about-info h2 {
+  margin-bottom: 1em;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.explore-info h2 {
+  margin-bottom: 1em;
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+}
+
+.explore-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #48b6a9;
   height: 35em;
 }
-.branding-info-container {
+
+.explore-info-container {
   height: 20em;
   width: 20em;
-  background-color: white;
+  background-color: #48b6a9;
+  background-image: url(../../assets/starfish.jpeg);
+  background-size: cover;
+  box-shadow: 10px 10px 20px #456471;
 }
-.branding-container p {
+.explore-container p {
   font-size: 1.4rem;
   max-width: 20em;
   margin-right: 15em;
   color: white;
+}
+
+.explore-button {
+  margin-top: 1em;
+  padding: 0.5em 0.75em;
+  font-size: 1.4rem;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: inherit;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.explore-button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  color: #48b6a9;
+}
+.highlight-light {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #d28d55;
+}
+
+.highlight-dark {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #456471;
 }
