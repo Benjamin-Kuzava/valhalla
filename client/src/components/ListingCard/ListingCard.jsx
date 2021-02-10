@@ -1,10 +1,14 @@
 import React from "react";
 import "./ListingCard.css";
 
-const ListingCard = () => {
+const ListingCard = (props) => {
+  const {imgURL, name, price} = props;
+
   return (
-    <div>
-      <h1>ListingCard</h1>
+    <div className="listing-div">
+      <img src={imgURL} />
+      <h1>{name}</h1>
+      <h2>{price }</h2>
     </div>
   );
 };
