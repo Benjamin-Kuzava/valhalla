@@ -11,9 +11,7 @@ const Home = (props) => {
         <ImageSlider />
         <h1>Home</h1>
       </div>
-      <div>
-        <ListingCards />
-      </div>
+      <div>{/* <ListingCards /> */}</div>
     </Layout>
   );
 };

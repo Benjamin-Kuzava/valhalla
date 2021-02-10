@@ -1,10 +1,14 @@
 .navbar {
   background: #456471;
   height: 80px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  opacity: 0.9;
+  position: fixed;
+  z-index: 20;
 }
 
 .navbar-logo {
@@ -82,7 +86,7 @@
   }
 
   .nav-menu.active {
-    background: rgba(5, 5, 5, 0.8);
+    background: #456471;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
