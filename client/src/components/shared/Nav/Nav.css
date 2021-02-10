@@ -48,13 +48,35 @@
   display: flex;
   align-items: center;
   height: 80px;
+  position: relative;
+}
+
+.nav-hover::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0.75em;
+  left: 0;
+  background-color: #fff;
+  height: 7px;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transition: transform ease-in-out 250ms;
+}
+
+.nav-hover:hover:before {
+  transform: scaleX(1);
 }
 
 .nav-links {
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
+
+/* .nav-links:hover {
+  color: #f4a261;
+} */
 
 .fa-bars {
   color: #fff;
