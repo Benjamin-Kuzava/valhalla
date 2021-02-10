@@ -3,7 +3,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import "./Listings.css";
 import { getListings } from "../../services/listings";
 
-const Listings = () => {
+const Listings = (props) => {
   const [allListings, setAllListings] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Listings = () => {
     fetchListings();
   }, []);
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div>
         <h1>Listings</h1>
       </div>

@@ -9,43 +9,49 @@ import Listings from "./screens/Listings/Listings";
 import ListingCreate from "./screens/ListingCreate/ListingCreate";
 import ListingEdit from "./screens/ListingEdit/ListingEdit";
 import ListingDetail from "./screens/ListingDetail/ListingDetail";
-// import { verifyUser } from './services/user' // User Stuff
-import { UserContext } from "./utilities/userContext";
+import { verifyUser } from "./services/user"; // User Stuff
+//import { UserContext } from "./utilities/userContext";
 
 const App = () => {
   const [user, setUser] = useState(null);
-
-  const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
-
+  const clearUser = () => setUser(null);
+  //const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser();
+      user ? setUser(user) : setUser(null);
+    };
+    fetchUser();
+  }, []);
   return (
     <div className="App">
       <Switch>
-        <UserContext.Provider value={providerValue}>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/sign-in">
-            <SignIn />
-          </Route>
-          <Route path="/sign-out">
-            <SignOut />
-          </Route>
-          <Route path="/sign-up">
-            <SignUp />
-          </Route>
-          <Route path="/listings">
-            <Listings />
-          </Route>
-          <Route path="/add-listing">
-            <ListingCreate />
-          </Route>
-          <Route path="/listings/:id/edit">
-            <ListingEdit />
-          </Route>
-          <Route path="/listings/:id">
-            <ListingDetail />
-          </Route>
-        </UserContext.Provider>
+        {/* <UserContext.Provider value={providerValue}> */}
+        <Route exact path="/">
+          <Home user={user} />
+        </Route>
+        <Route path="/sign-in">
+          <SignIn setUser={setUser} />
+        </Route>
+        <Route path="/sign-out">
+          <SignOut setUser={setUser} clearUser={clearUser} />
+        </Route>
+        <Route path="/sign-up">
+          <SignUp setUser={setUser} />
+        </Route>
+        <Route path="/listings">
+          <Listings user={user} />
+        </Route>
+        <Route path="/add-listing">
+          <ListingCreate user={user} />
+        </Route>
+        <Route path="/listings/:id/edit">
+          <ListingEdit user={user} />
+        </Route>
+        <Route path="/listings/:id">
+          <ListingDetail user={user} />
+        </Route>
+        {/* </UserContext.Provider> */}
       </Switch>
     </div>
   );

@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import "./ListingDetail.css";
 
-const ListingDetail = () => {
+const ListingDetail = (props) => {
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div>
         <h1>Detail</h1>
       </div>
