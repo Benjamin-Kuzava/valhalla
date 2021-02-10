@@ -1,51 +1,94 @@
 import React, { useState } from "react";
-import "./Nav.css";
 import { NavLink } from "react-router-dom";
-//import { UserContext } from "../../../utilities/userContext";
-
-const staticOptions = (
-  <>
-    <NavLink to="/listings">Buy</NavLink>
-    <NavLink to="/add-listing">Sell</NavLink>
-    <NavLink to="/about">About</NavLink>
-  </>
-);
-
-const unauthenticatedOptions = (
-  <>
-    <NavLink to="/sign-in">Sign In</NavLink>
-    <NavLink to="/sign-up">Sign Up</NavLink>
-  </>
-);
-
-const authenticatedOptions = (
-  <>
-    <NavLink to="/sign-out">Sign Out</NavLink>
-  </>
-);
+import Dropdown from "../Dropdown/Dropdown";
+import "./Nav.css";
 
 const Nav = ({ user }) => {
-  //const { user } = useContext(UserContext);
-  const [isClicked, setIsClicked] = useState(false);
+  const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
 
   return (
-    <nav className="navbar">
-      <div className="logo-info">
-        <NavLink to="/">
-          <h1 className="title">Valhalla</h1>
+    <>
+      <nav className="navbar">
+        <NavLink to="/" className="navbar-logo">
+          <h1>Valhalla</h1>
         </NavLink>
-        <div className="info-links">{staticOptions}</div>
-      </div>
-      <div className="login">
-        {/* <div>
-          Login
-          <i className="fas fa-caret-down"></i>
-        </div> */}
-        {/* {user ? <NavLink to="/">{user}</NavLink> : null} */}
-        {user ? authenticatedOptions : unauthenticatedOptions}
-        <i class="fas fa-user-circle"></i>
-      </div>
-    </nav>
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <NavLink to="/" className="nav-links" onClick={closeMobileMenu}>
+              Buy
+            </NavLink>
+          </li>
+
+          <li className="nav-item">
+            <NavLink
+              to="/services"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Sell
+            </NavLink>
+          </li>
+
+          <li className="nav-item">
+            <NavLink
+              to="/contact-us"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              About
+            </NavLink>
+          </li>
+
+          <li className="nav-item">
+            <NavLink
+              to="/sign-up"
+              className="nav-links-mobile"
+              onClick={closeMobileMenu}
+            >
+              Log in
+            </NavLink>
+          </li>
+        </ul>
+        <li
+          className="nav-item login toggle"
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        >
+          <NavLink
+            to="/services"
+            className="nav-links"
+            onClick={closeMobileMenu}
+          >
+            {user ? "Profile " : "Log in "}
+            <i className="fas fa-caret-down" />
+          </NavLink>
+          {dropdown && <Dropdown user={user} />}
+        </li>
+      </nav>
+    </>
   );
 };
 
