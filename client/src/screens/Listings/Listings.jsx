@@ -16,7 +16,7 @@ const Listings = (props) => {
   }, []);
   return (
     <Layout user={props.user}>
-      <div>
+      <div >
       <ListingCards />
       </div>
     </Layout>
