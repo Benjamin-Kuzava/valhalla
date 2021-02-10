@@ -1,0 +1,44 @@
+.slider {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  height: 40em;
+  object-fit: cover;
+}
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.5;
+}
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.5;
+}
+#brand {
+  position: absolute;
+  margin-left: 10em;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
