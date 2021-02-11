@@ -22,10 +22,30 @@
 .listing-image {
   max-width: 100%;
   height: auto;
+  float: right;
 }
 
 .recommended-container {
   background-color: cadetblue;
+}
+
+.buy-button {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem auto;
+  border-radius: 4px;
+  width: 100%;
+  background: #f4a261;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.buy-button:hover {
+  background: #fff;
+  color: #e76f51;
+  transition: 250ms;
 }
 
 .image-container {
