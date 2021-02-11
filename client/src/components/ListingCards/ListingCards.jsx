@@ -3,10 +3,6 @@ import React, { useState, useEffect } from "react";
 import { getListings } from "../../services/listings";
 import ListingCard from "../ListingCard/ListingCard";
 
-
-
-
-
 const ListingCards = (props) => {
   const [allListings, setAllListings] = useState([]);
   const { queriedListings } = props;
@@ -47,7 +43,7 @@ const ListingCards = (props) => {
         ))}
       </div>
     );
-  };
-}
+  }
+};
 
 export default ListingCards;

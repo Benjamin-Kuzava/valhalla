@@ -16,12 +16,16 @@ const ListingDetail = (props) => {
   }, []);
 
   const recIslands = allListings.slice(0, 4);
-  
 
   return (
     <Layout user={props.user}>
-      <div className="image-container">
-        
+      <section className="product-details">
+        <div className="listing-image-container pd"></div>
+        <div className="listing-details-container pd"></div>
+      </section>
+      <div className="recommended-container pd"></div>
+
+      {/* <div className="image-container">
         {recIslands.map((listing) => {
           return (
             <div className="image-details">
@@ -31,7 +35,7 @@ const ListingDetail = (props) => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </Layout>
   );
 };
