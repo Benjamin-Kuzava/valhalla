@@ -1,4 +1,6 @@
+
 import React from "react";
+import {  useState, useEffect} from 'react';
 import Layout from "../../components/shared/Layout/Layout";
 import { getListings } from "../../services/listings";
 import { useState } from 'react';
@@ -33,8 +35,8 @@ const ListingDetail = (props) => {
             </div>
           ))};
       </div>
-    </Layout>
-  );
-};
+      </Layout>
+  )
+  }
 
-export default ListingDetail;
+  export default ListingDetail;
