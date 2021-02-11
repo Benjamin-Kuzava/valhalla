@@ -12,6 +12,8 @@ import ListingDetail from "./screens/ListingDetail/ListingDetail";
 import { verifyUser } from "./services/user"; // User Stuff
 import ImageSlider from "./components/ImageSlider/ImageSlider";
 //import { UserContext } from "./utilities/userContext";
+import About from './screens/About/About';
+
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -54,6 +56,9 @@ const App = () => {
           <ListingDetail user={user} />
         </Route>
         {/* </UserContext.Provider> */}
+        <Route path="/about">
+          <About user={user}/>
+        </Route>
       </Switch>
     </div>
   );

@@ -1,0 +1,39 @@
+.whatever {
+  height: 10em;
+}
+
+.about-container {
+  height: 80vh;
+  /* background-color: rgb(246, 217, 143); */
+  
+}
+.about-h1 {
+  margin-top: -23em;
+  margin-left: -10em;
+}
+
+.about-image {
+
+  background-color: rgb(238, 4, 4);
+  margin-top: -5em;
+  margin-left: 10em;
+  height: 700px;
+  width: 500px;
+}
+
+
+.paragraph {
+  margin-left: -17em;
+  margin-top: -6em;
+}
+
+p {
+  font-size: 46px;
+
+}
+
+.about-rich {
+  height: 700px;
+  width: 1000px;
+}
+
