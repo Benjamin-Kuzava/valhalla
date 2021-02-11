@@ -5,6 +5,7 @@ import { getListings } from "../../services/listings";
 import ListingCards from "../../components/ListingCards/ListingCards";
 import Search from "../../components/Search/Search";
 import "../../components/Search/Search.css";
+import ImageSlider from "../../components/ImageSlider/ImageSlider";
 
 
 const Listings = (props) => {
@@ -34,6 +35,7 @@ const Listings = (props) => {
     <Layout user={props.user}>
       <div >
         {/* <Search setQueriedListings={setQueriedListings} handleChange={ handleSearch}/> */}
+        <ImageSlider />
         <div>
       <form className="search-form">
         <input 
