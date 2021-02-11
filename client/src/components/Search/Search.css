@@ -13,6 +13,7 @@
   padding: 12px 20px 12px 40px;
   margin: 40px;
   border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .search-input::placeholder {

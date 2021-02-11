@@ -23,10 +23,10 @@ h3 {
   padding-top: 20px;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-button {
+.sign-in-input[type="text"],
+.sign-in-input[type="password"],
+.sign-in-input[type="email"],
+#sign-in-button {
   width: 80%;
   margin-top: 0.7rem;
   margin-left: 10%;
@@ -40,7 +40,7 @@ button {
   border: 1px solid #f4a261;
 }
 
-button {
+#sign-in-button {
   background: #456471;
   border: none;
   color: white;
