@@ -11,10 +11,10 @@
   font-size: 18px;
   letter-spacing: 0.1px;
   padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
   margin: 40px;
+  border: 1px solid #ddd;
 }
 
 .search-input::placeholder {
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
 }
