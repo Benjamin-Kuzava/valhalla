@@ -38,7 +38,7 @@ export const updateListing = async (id, listing) => {
 
 export const deleteListing = async (id) => {
   try {
-    const response = await api.delete(`/products/${id}`);
+    const response = await api.delete(`/listings/${id}`);
     return response.data;
   } catch (error) {
     throw error;
