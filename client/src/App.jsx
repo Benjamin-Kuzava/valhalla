@@ -50,7 +50,7 @@ const App = () => {
         <Route path="/listings/:id/edit">
           <ListingEdit user={user} />
         </Route>
-        <Route path="/listing/details">
+        <Route path="/listing/:id">
           <ListingDetail user={user} />
         </Route>
         {/* </UserContext.Provider> */}
