@@ -16,29 +16,31 @@ h3 {
   font-weight: 200;
   font-size: 2em;
   margin-top: 10px;
+  margin-bottom: 1em;
   color: #34495e;
 }
-.form-container {
+.form-container1 {
   padding-top: 20px;
 }
 
-input[type="text"],
-input[type="password"],
-button {
+.sign-in-input[type="text"],
+.sign-in-input[type="password"],
+.sign-in-input[type="email"],
+#sign-in-button {
   width: 80%;
-  margin-top: 0.5rem;
+  margin-top: 0.7rem;
   margin-left: 10%;
   margin-bottom: 25px;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid rgb(255, 254, 248);
+  border: 1px solid rgb(214, 214, 214);
   padding-left: 0.5em;
 }
 :focus {
   border: 1px solid #f4a261;
 }
 
-button {
+#sign-in-button {
   background: #456471;
   border: none;
   color: white;

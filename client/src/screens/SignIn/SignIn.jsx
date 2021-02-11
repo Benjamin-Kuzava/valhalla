@@ -3,6 +3,7 @@ import "./SignIn.css";
 import React, { useState } from "react";
 import { signIn } from "../../services/user";
 import { useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const SignIn = (props) => {
   const history = useHistory();
@@ -46,12 +47,16 @@ const SignIn = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
+        <button id="sign-in-button" type="submit" className={toggleForm}>
           {form.errorMsg}
         </button>
       );
     } else {
-      return <button type="submit">Sign In</button>;
+      return (
+        <button id="sign-in-button" type="submit">
+          Sign In
+        </button>
+      );
     }
   };
 
@@ -62,10 +67,11 @@ const SignIn = (props) => {
       <div className="page"></div>
       <div className="page-container">
         <h3>Sign In</h3>
-        <div className="form-container">
+        <div className="form-container1">
           <form onSubmit={onSignIn}>
             <label>Username</label>
             <input
+              className="sign-in-input"
               required
               type="text"
               name="username"
@@ -75,6 +81,7 @@ const SignIn = (props) => {
             />
             <label>Password</label>
             <input
+              className="sign-in-input"
               required
               name="password"
               value={password}
@@ -85,7 +92,9 @@ const SignIn = (props) => {
             {renderError()}
           </form>
           <div className="signup">
-            <h4>Dont have an Account? Register</h4>
+            <NavLink to="/sign-up" className="register">
+              <h4>Dont have an Account? Register</h4>
+            </NavLink>
           </div>
         </div>
       </div>

@@ -86,7 +86,7 @@ const Nav = ({ user }) => {
           onMouseLeave={onMouseLeave}
         >
           <NavLink
-            to="/services"
+            to="/sign-up"
             className="nav-links"
             onClick={closeMobileMenu}
           >

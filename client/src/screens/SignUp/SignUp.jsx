@@ -46,12 +46,16 @@ const SignUp = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
+        <button id="sign-in-button" type="submit" className={toggleForm}>
           {form.errorMsg}
         </button>
       );
     } else {
-      return <button type="submit">Sign Up</button>;
+      return (
+        <button id="sign-in-button" type="submit">
+          Sign Up
+        </button>
+      );
     }
   };
 
@@ -59,11 +63,13 @@ const SignUp = (props) => {
 
   return (
     <Layout>
+      <div className="page-signup"></div>
       <div className="form-container">
         <h3>Sign Up</h3>
         <form onSubmit={onSignUp}>
           <label>Username</label>
           <input
+            className="sign-in-input"
             required
             type="text"
             name="username"
@@ -73,6 +79,7 @@ const SignUp = (props) => {
           />
           <label>Email address</label>
           <input
+            className="sign-in-input"
             required
             type="email"
             name="email"
@@ -82,6 +89,7 @@ const SignUp = (props) => {
           />
           <label>Password</label>
           <input
+            className="sign-in-input"
             required
             name="password"
             value={password}
@@ -91,6 +99,7 @@ const SignUp = (props) => {
           />
           <label>Password Confirmation</label>
           <input
+            className="sign-in-input"
             required
             name="passwordConfirmation"
             value={passwordConfirmation}
