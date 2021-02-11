@@ -1,5 +1,5 @@
 .search-form {
-  padding-top: 100px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +11,7 @@
   font-size: 18px;
   letter-spacing: 0.1px;
   padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
+  border: 2px solid #262525;
   margin: 40px;
 }
 
