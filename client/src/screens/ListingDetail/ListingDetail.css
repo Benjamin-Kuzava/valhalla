@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10em 10em 2em;
+  padding: 10em 10em 8em;
   margin: 0 auto;
 }
 
@@ -110,6 +110,35 @@
   color: white;
   text-align: center;
   margin: 0;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-button,
+.delete-button {
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem auto;
+  border: 0;
+  border-radius: 4px;
+  width: 20%;
+  background: #456471;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  color: #456471;
+  border: 1px solid #456471;
+  background-color: white;
+  transition: 250ms;
 }
 
 @media screen and (max-width: 1400px) {
