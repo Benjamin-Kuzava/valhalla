@@ -6,6 +6,7 @@ import ListingCard from "../ListingCard/ListingCard";
 const ListingCards = (props) => {
   const [allListings, setAllListings] = useState([]);
   const { queriedListings } = props;
+
   useEffect(() => {
     const fetchListings = async () => {
       const listings = await getListings();
@@ -13,6 +14,7 @@ const ListingCards = (props) => {
     };
     fetchListings();
   }, []);
+
   if (queriedListings.length > 0) {
     return (
       <div className="listcard">
