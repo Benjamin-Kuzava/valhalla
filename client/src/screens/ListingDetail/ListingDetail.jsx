@@ -2,7 +2,8 @@
 import React from "react";
 import {  useState, useEffect} from 'react';
 import Layout from "../../components/shared/Layout/Layout";
-import { getListings } from "../../services/listings"
+import { getListings } from "../../services/listings";
+import { useState } from 'react';
 import "./ListingDetail.css";
 
 const ListingDetail = (props) => {
@@ -19,11 +20,9 @@ const ListingDetail = (props) => {
     fetchListings();
   }, []);
 
-
-
   return (
     <Layout user={props.user}>
-      <div className="image-container">
+       <div className="image-container">
           
           <h3>Recommended Listings</h3>
 
