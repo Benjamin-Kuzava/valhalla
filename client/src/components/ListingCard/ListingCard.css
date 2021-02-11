@@ -1,9 +1,9 @@
-
-.listing-div{
- display: flex;
- flex-direction: column;
- position: relative;
- margin-bottom: -3em;
+.listing-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: -7em;
+  text-decoration: none;
 }
 
 .img-listing {
@@ -11,31 +11,35 @@
   height: 400px;
   width: 600px;
 }
-
+.listing-title-box {
+  height: 10em;
+  margin-bottom: 2em;
+}
+a {
+  text-decoration: none;
+}
 .h1-listing {
   display: flex;
   position: relative;
-  bottom: 100px;
-  left: 100px;
-  font-size: 35px;
-  color: white;
-  font-weight: 1000px;
-  font-family: "Roboto";
-  text-shadow: 2px 3px 2px hsl(8, 95%, 49%);
-  
-  }
+  margin-top: 0.3em;
+  left: 20px;
+  font-size: 24px;
+  color: rgb(77, 77, 77);
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
 
 .h3-listing {
+  text-decoration: none;
   display: flex;
   position: relative;
-  bottom: 100px;
-  left: 100px;
-  font-size: 25px;
-  color: white;
+  left: 20px;
+  margin-top: -0em;
+  font-size: 18px;
+  color: rgb(141, 141, 141);
   font-weight: 1000px;
-  font-family: "Roboto";
-  text-shadow: 2px 3px 2px hsl(238, 90%, 49%);
-  
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
