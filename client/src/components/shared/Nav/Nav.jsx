@@ -75,7 +75,7 @@ const Nav = ({ user }) => {
               className="nav-links-mobile"
               onClick={closeMobileMenu}
             >
-              Log in2222
+              Log in
             </NavLink>
           </li>
         </ul>

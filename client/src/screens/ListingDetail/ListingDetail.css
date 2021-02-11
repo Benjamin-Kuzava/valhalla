@@ -2,61 +2,130 @@
   padding-top: 10em;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-wrap: wrap;
   padding: 10em 10em 2em;
   margin: 0 auto;
 }
 
 .product-details > * {
-  flex: 1 1 25em;
+  flex: 1 1 30em;
+  width: 40em;
   margin: 0 2em;
-}
-
-.pd {
-  /* background-color: cadetblue; */
-  height: 40em;
   /* border: 1px solid black; */
 }
 
-.listing-image {
-  max-width: 100%;
-  height: auto;
-  float: right;
+.pd {
+  min-height: 40em;
 }
 
-.recommended-container {
-  background-color: cadetblue;
+/* .listing-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.listing-details-container > * {
+  max-width: 70%;
+}
+
+.details-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.detail-description {
+  margin-left: 3em;
+  line-height: 1.5;
+  font-family: "Domine", serif;
+  height: 15.5em;
+  overflow-y: auto;
+}
+
+.detail-label {
+  font-weight: bold;
+}
+
+.detail-title {
+  font-family: "Domine", serif;
+  font-size: 2.5rem;
+  margin: 0.5em 0;
+}
+
+.listing-details-container h5 {
+  font-family: "Domine", serif;
+  font-size: 1.3rem;
+}
+
+.listing-details-container p {
+  font-size: 1.2rem;
+}
+
+.listing-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+
+  align-self: center;
+}
+
+.listing-image {
+  width: 100%;
 }
 
 .buy-button {
-  display: block;
   text-align: center;
   padding: 1rem;
   margin: 2rem auto;
+  border: 0;
   border-radius: 4px;
   width: 100%;
   background: #f4a261;
+  border: 1px solid transparent;
   text-decoration: none;
   color: #fff;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .buy-button:hover {
   background: #fff;
   color: #e76f51;
+  border: 1px solid #e76f51;
   transition: 250ms;
 }
+
+.recommended-container {
+  background-color: #48b6a9;
+  /* opacity: 0.6; */
+  width: 90vw;
+  margin: 0 auto;
+  height: fit-content;
+  padding: 1em;
+}
+
+.recommended-container .detail-title {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  .detail-description {
+    width: 100%;
+  }
+}
+
+/* Damion */
 
 .image-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
-  height: 100vh;
-  width: 100vw;
-  background: #fff;
-  padding: 60px;
+  /* padding: 60px; */
 }
 
 .image-container h3 {
@@ -67,14 +136,15 @@
   align-items: center;
 }
 
-/* img {
+.recommended-images {
   display: flex;
+  width: 400px;
   height: 300px;
-  width: 250px;
+
   border-radius: 2%;
   border: 1px solid #8d8d8d;
   margin: 15px 4px;
-} */
+}
 
 .image-details h3 {
   position: relative;
