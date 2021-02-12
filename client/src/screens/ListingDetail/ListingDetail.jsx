@@ -10,6 +10,8 @@ import "./ListingDetail.css";
 import { useParams, Redirect, Link } from "react-router-dom";
 import ListingEdit from "../../screens/ListingEdit/ListingEdit"
 
+import { useParams, Redirect } from "react-router-dom";
+import Recommended from "../../components/Recommended/Recommended";
 
 const ListingDetail = (props) => {
   const [allListings, setAllListings] = useState([]);
@@ -24,17 +26,28 @@ const ListingDetail = (props) => {
       setListing(listing);
     };
     fetchListing();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     const fetchListings = async () => {
-      const listings = await getListings();
+      const listings = getRandom(await getListings());
       setAllListings(listings);
     };
     fetchListings();
-  }, []);
+  }, [id]);
 
-  const recIslands = allListings.slice(3, 7);
+  const getRandom = (arr) => {
+    let result = [];
+    for (let i = 0; result.length < 4; i++) {
+      let random = arr[Math.floor(Math.random() * arr.length)]; // grab a random listing
+      if (random._id !== id && !result.includes(random)) {
+        result.push(random);
+      }
+    }
+    return result;
+  };
+
+  const recIslands = allListings.slice(0, 4);
 
   const handleDelete = async () => {
     await deleteListing(listing._id);
@@ -73,20 +86,7 @@ const ListingDetail = (props) => {
           )}
         </div>
       </section>
-      <div className="recommended-container">
-        <h1 className="recommended-title">Recommended Listings</h1>
-        <div className="image-container">
-          {recIslands.map((listing) => {
-            return (
-              <div className="image-details" key={listing._id}>
-                <img src={listing.imgURL} className="recommended-images" />
-                <h1 className="recommended-name">{listing.name}</h1>
-                <h3 className="recommended-price">{listing.price}</h3>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <Recommended recIslands={recIslands} />
     </Layout>
   );
 };
