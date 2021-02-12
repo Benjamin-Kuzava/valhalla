@@ -32,7 +32,7 @@ const ListingDetail = (props) => {
     fetchListings();
   }, []);
 
-  const recIslands = allListings.slice(3, 6);
+  const recIslands = allListings.slice(3, 7);
 
   const handleDelete = async () => {
     await deleteListing(listing._id);
@@ -72,14 +72,14 @@ const ListingDetail = (props) => {
         </div>
       </section>
       <div className="recommended-container">
-        <h1 className="detail-title">Recommended Listings</h1>
+        <h1 className="recommended-title">Recommended Listings</h1>
         <div className="image-container">
           {recIslands.map((listing) => {
             return (
               <div className="image-details" key={listing._id}>
                 <img src={listing.imgURL} className="recommended-images" />
-                {/* <h3>{listing.name}</h3>
-                <h3>{listing.price}</h3> */}
+                <h1 className="recommended-name">{listing.name}</h1>
+                <h3 className="recommended-price">{listing.price}</h3>
               </div>
             );
           })}
