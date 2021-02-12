@@ -27,11 +27,22 @@ const ListingDetail = (props) => {
 
   useEffect(() => {
     const fetchListings = async () => {
-      const listings = await getListings();
+      const listings = getRandom(await getListings());
       setAllListings(listings);
     };
     fetchListings();
-  }, []);
+  }, [id]);
+
+  const getRandom = (arr) => {
+    let result = [];
+    for (let i = 0; result.length < 4; i++) {
+      let random = arr[Math.floor(Math.random() * arr.length)];
+      if (random._id !== id && !result.includes(random)) {
+        result.push(random);
+      }
+    }
+    return result;
+  };
 
   const recIslands = allListings.slice(0, 4);
 
