@@ -5,10 +5,9 @@ import "./About.css";
 function About(props) {
   return (
     <Layout user={props.user}>
-      <div className="whatever"></div>
       <div className="about-us-container">
-        <h1 className="about-h1">About Us</h1>
         <div className="paragraph">
+          <h1 className="about-h1">About Us</h1>
           <p>
             Representing the largest majority of islands available for sale,
             Valhalla Inc. is the only international real estate web site
