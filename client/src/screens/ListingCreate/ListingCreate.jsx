@@ -61,8 +61,10 @@ const ListingCreate = (props) => {
               onChange={handleChange}
             />
             <label>Description</label>
-            <input
-              className="create-input"
+            <textarea
+              className="create-description"
+              rows={10}
+              cols={50}
               required
               name="description"
               value={description}
