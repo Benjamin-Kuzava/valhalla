@@ -3,7 +3,6 @@ import "./ListingCreate.css";
 import React, { useState } from "react";
 import { createListing } from "../../services/listings";
 import { Redirect } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 
 const ListingCreate = (props) => {
   const [listing, setListing] = useState({

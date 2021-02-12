@@ -74,10 +74,6 @@
   padding: 0.5rem 1rem;
 }
 
-/* .nav-links:hover {
-  color: #f4a261;
-} */
-
 .fa-bars {
   color: #fff;
 }
@@ -169,6 +165,10 @@
   }
 
   .toggle {
+    display: none;
+  }
+
+  .nav-hover::before {
     display: none;
   }
 }
