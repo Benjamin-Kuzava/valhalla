@@ -3,11 +3,13 @@ import "./Recommended.css";
 import { NavLink } from "react-router-dom";
 
 const Recommended = (props) => {
+  const { recIslands } = props;
+
   return (
     <div className="recommended-container">
       <h1 className="recommended-title">Recommended Listings</h1>
       <div className="image-container">
-        {props.recIslands.map((listing) => {
+        {recIslands.map((listing) => {
           return (
             <div className="image-details" key={listing._id}>
               <NavLink to={`/listing/${listing._id}`}>

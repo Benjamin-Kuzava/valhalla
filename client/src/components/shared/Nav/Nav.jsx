@@ -10,19 +10,16 @@ const activeStyle = {
 };
 
 const Nav = ({ user }) => {
-  const [click, setClick] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleIsClicked = () => setIsClicked(!isClicked);
+  const closeMobileMenu = () => setIsClicked(false);
 
-  const onMouseEnter = () => {
+  const onMouseEnter = () =>
     setDropdown(window.innerWidth > 960 ? true : false);
-  };
 
-  const onMouseLeave = () => {
-    setDropdown(false);
-  };
+  const onMouseLeave = () => setDropdown(false);
 
   return (
     <>
@@ -31,11 +28,11 @@ const Nav = ({ user }) => {
           <h1>Valhalla</h1>
         </NavLink>
 
-        <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        <div className="menu-icon" onClick={handleIsClicked}>
+          <i className={isClicked ? "fas fa-times" : "fas fa-bars"} />
         </div>
 
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
+        <ul className={isClicked ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item nav-hover">
             <NavLink
               to="/listings"
