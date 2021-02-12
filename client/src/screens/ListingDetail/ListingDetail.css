@@ -97,21 +97,6 @@
   transition: 250ms;
 }
 
-.recommended-container {
-  background-color: #48b6a9;
-  /* opacity: 0.6; */
-  width: 90vw;
-  margin: 0 auto;
-  height: fit-content;
-  padding: 1em;
-}
-
-.recommended-container .detail-title {
-  color: white;
-  text-align: center;
-  margin: 0;
-}
-
 .edit-buttons {
   display: flex;
   justify-content: space-between;
@@ -149,37 +134,62 @@
 
 /* Damion */
 
+.recommended-container {
+  /* background-color: #cdf7f1; */
+  /* opacity: 0.9; */
+  /* background-color: white; */
+  width: 90vw;
+  margin: 10px auto;
+  /* height: fit-content; */
+  padding: 1em;
+}
+
 .image-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
-  /* padding: 60px; */
 }
 
-.image-container h3 {
-  font-family: "Roboto";
-  color: #000;
-  position: relative;
-  bottom: 45px;
-  align-items: center;
+.recommended-title {
+  font-family: "Roboto", sans-serif;
+  /* color: rgb(77, 77, 77); */
+  /* color: #1b8b7b; */
+  /* box-shadow: -10px 10px 40px #f57d1b; */
+  color: #f57d1b;  
+  box-shadow: -10px 10px 60px #8cd0f0; 
+  font-weight: 640;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .recommended-images {
   display: flex;
   width: 400px;
   height: 300px;
-
-  border-radius: 2%;
-  border: 1px solid #8d8d8d;
   margin: 15px 4px;
 }
 
-.image-details h3 {
+.recommended-name {
+  display: flex;
   position: relative;
-  color: black;
-  text-align: center;
-  font-family: "Roboto";
-  background-color: rgba(250, 250, 250, 0.3);
-  bottom: 75px;
+  margin-top: 0.3em;
+  left: 20px;
+  font-size: 24px;
+  color: rgb(77, 77, 77);
+  font-weight: 1000;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.recommended-price {
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  left: 20px;
+  margin-top: -0em;
+  font-size: 18px;
+  color: rgb(141, 141, 141);
+  font-weight: 1000;
+  font-family: "Roboto", sans-serif;
 }
