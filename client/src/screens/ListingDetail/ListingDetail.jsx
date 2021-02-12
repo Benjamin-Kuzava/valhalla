@@ -9,8 +9,6 @@ import {
 import "./ListingDetail.css";
 import { useParams, Redirect, Link } from "react-router-dom";
 import ListingEdit from "../../screens/ListingEdit/ListingEdit"
-
-import { useParams, Redirect } from "react-router-dom";
 import Recommended from "../../components/Recommended/Recommended";
 
 const ListingDetail = (props) => {
