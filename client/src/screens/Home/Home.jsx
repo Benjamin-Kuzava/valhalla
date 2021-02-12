@@ -1,10 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import Layout from "../../components/shared/Layout/Layout";
 import "./Home.css";
-import ListingCards from "../../components/ListingCards/ListingCards";
 
 const Home = (props) => {
+  const history = useHistory();
+
   return (
     <Layout user={props.user}>
       <div id="home-container">
@@ -34,7 +36,12 @@ const Home = (props) => {
               consectetur adipisicing elit. Enim ab ratione impedit atque itaque
               laudantium.
             </p>
-            <button className="explore-button">Explore</button>
+            <button
+              className="explore-button"
+              onClick={() => history.push("/listings")}
+            >
+              Explore
+            </button>
           </div>
           <div className="explore-info-container"></div>
         </div>

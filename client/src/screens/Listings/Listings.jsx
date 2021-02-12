@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import "./Listings.css";
 import { getListings } from "../../services/listings";
-import ListingCards from "../../components/ListingCards/ListingCards";
-// import Search from "../../components/Search/Search";
+import ListingCard from "../../components/ListingCard/ListingCard";
+import Search from "../../components/Search/Search";
 import { AZ, ZA, lowestFirst, highestFirst } from "../../utilities/sort";
 import "../../components/Search/Search.css";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
@@ -16,7 +16,7 @@ const Listings = (props) => {
 
   useEffect(() => {
     const fetchListings = async () => {
-      const listings = await getListings();
+      const listings = AZ(await getListings());
       setAllListings(listings);
       setQueriedListings(listings);
     };
@@ -44,35 +44,31 @@ const Listings = (props) => {
   };
 
   const handleSearch = (e) => {
-    const newQueriedListings = allListings.filter((listing) => {
-      if (listing.name.toLowerCase().includes(e.target.value.toLowerCase())) {
-        return true;
-      }
-    });
+    const newQueriedListings = allListings.filter((listing) =>
+      listing.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
     setQueriedListings(newQueriedListings, () => handleSort(sortType));
   };
 
   const handleSubmit = (e) => e.preDefault();
+
+  const listingsJSX = queriedListings.map((listing, index) => (
+    <ListingCard
+      id={listing._id}
+      name={listing.name}
+      imgURL={listing.imgURL}
+      price={listing.price}
+      key={index}
+    />
+  ));
+
   return (
     <Layout user={props.user}>
       <div>
-        {/* <Search setQueriedListings={setQueriedListings} handleChange={ handleSearch}/> */}
         <ImageSlider />
-        <div>
-          <form className="search-form">
-            <input
-              className="search-input"
-              type="text"
-              name="searchBar"
-              id="searchbar"
-              placeholder="search"
-              // value={search}
-              onChange={handleSearch}
-            />
-            <Sort onSubmit={handleSubmit} onChange={handleSort} />
-          </form>
-        </div>
-        <ListingCards queriedListings={queriedListings} />
+        <Search onSubmit={handleSubmit} onChange={handleSearch} />
+        <Sort onSubmit={handleSubmit} onChange={handleSort} />
+        <div className="listcard">{listingsJSX}</div>
       </div>
     </Layout>
   );
