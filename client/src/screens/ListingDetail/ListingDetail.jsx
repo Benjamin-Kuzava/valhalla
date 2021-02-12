@@ -35,9 +35,11 @@ const ListingDetail = (props) => {
 
   const getRandom = (arr) => {
     let result = [];
+    // For loop until there are four items in the array
     for (let i = 0; result.length < 4; i++) {
-      let random = arr[Math.floor(Math.random() * arr.length)];
+      let random = arr[Math.floor(Math.random() * arr.length)]; // grab a random listing
       if (random._id !== id && !result.includes(random)) {
+        // if random listing doesn't match current listing && the result array doesn't include random
         result.push(random);
       }
     }
