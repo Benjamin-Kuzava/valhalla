@@ -1,3 +1,12 @@
+.listcard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 60px;
+  margin: 0px;
+}
+
 .listing-div {
   display: flex;
   flex-direction: column;
@@ -10,7 +19,14 @@
   display: flex;
   height: 400px;
   width: 600px;
+  transition: transform 250ms ease-in-out;
 }
+
+.img-listing:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
+}
+
 .listing-title-box {
   height: 10em;
   margin-bottom: 2em;
