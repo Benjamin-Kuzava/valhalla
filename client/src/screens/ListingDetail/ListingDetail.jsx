@@ -7,6 +7,9 @@ import {
   deleteListing,
 } from "../../services/listings";
 import "./ListingDetail.css";
+import { useParams, Redirect, Link } from "react-router-dom";
+import ListingEdit from "../../screens/ListingEdit/ListingEdit"
+
 import { useParams, Redirect } from "react-router-dom";
 import Recommended from "../../components/Recommended/Recommended";
 
@@ -75,7 +78,7 @@ const ListingDetail = (props) => {
           </div>
           {props.user && (
             <div className="edit-buttons">
-              <button className="edit-button">Edit</button>
+              <button className="edit-button"><Link className="edit-link1" to={`/edit-listing/${listing._id}`}>Edit</Link></button>
               <button className="delete-button" onClick={() => handleDelete()}>
                 Delete
               </button>

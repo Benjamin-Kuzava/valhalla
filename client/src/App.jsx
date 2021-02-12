@@ -49,7 +49,7 @@ const App = () => {
         <Route path="/add-listing">
           <ListingCreate user={user} />
         </Route>
-        <Route path="/listings/:id/edit">
+        <Route path="/edit-listing/:id">
           <ListingEdit user={user} />
         </Route>
         <Route path="/listing/:id">
