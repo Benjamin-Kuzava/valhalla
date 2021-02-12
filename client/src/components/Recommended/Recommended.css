@@ -26,6 +26,12 @@
   width: 400px;
   height: 300px;
   margin: 15px 4px;
+  transition: transform 250ms ease-in-out;
+}
+
+.recommended-images:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
 }
 
 .recommended-name {
