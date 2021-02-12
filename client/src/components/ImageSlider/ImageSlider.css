@@ -42,3 +42,27 @@
   font-size: 50px;
   font-weight: bold;
 }
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+  animation: 20s infinite;
+}
+.slide.active {
+  opacity: 5;
+  transition-duration: 1s ease;
+}
+@keyframes identifier {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+    left: 20px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
