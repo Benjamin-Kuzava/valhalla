@@ -1,0 +1,59 @@
+.recommended-container {
+  width: 100vw;
+  margin: 10px auto;
+  padding: 2em;
+  background-color: rgba(230, 232, 231, 0.8);
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.recommended-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(77, 77, 77);
+}
+
+.recommended-images {
+  display: flex;
+  width: 400px;
+  height: 300px;
+  margin: 15px 4px;
+  transition: transform 250ms ease-in-out;
+}
+
+.recommended-images:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
+}
+
+.recommended-name {
+  display: flex;
+  position: relative;
+  margin-top: 0.3em;
+  left: 20px;
+  font-size: 24px;
+  color: rgb(77, 77, 77);
+  font-weight: 1000;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+.recommended-price {
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  left: 20px;
+  margin-top: -0em;
+  font-size: 18px;
+  color: rgb(141, 141, 141);
+  font-weight: 1000;
+  font-family: "Roboto", sans-serif;
+}
