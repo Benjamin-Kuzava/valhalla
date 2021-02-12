@@ -6,7 +6,9 @@ const Sort = (props) => {
 
   return (
     <form className="sort-container" onSubmit={props.handleSubmit}>
-      <label htmlFor="sort">Sort By:</label>
+      <label className="sort-label" htmlFor="sort">
+        Sort By:
+      </label>
       <select className="sort" onChange={handleChange}>
         <option className="option" value="name-ascending">
           &nbsp; Alphabetically, A-Z &nbsp;

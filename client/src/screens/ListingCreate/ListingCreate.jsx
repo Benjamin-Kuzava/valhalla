@@ -7,9 +7,9 @@ import { NavLink } from "react-router-dom";
 
 const ListingCreate = (props) => {
   const [listing, setListing] = useState({
-    title: "",
-    description: "",
+    name: "",
     imgURL: "",
+    description: "",
     price: "",
   });
 
@@ -33,7 +33,7 @@ const ListingCreate = (props) => {
     return <Redirect to={`/listings`} />;
   }
 
-  const { name, price, description, author } = listing;
+  const { name, price, description, imgURL } = listing;
   return (
     <Layout>
       <div className="background">
@@ -71,14 +71,14 @@ const ListingCreate = (props) => {
               placeholder="Description"
               onChange={handleChange}
             />
-            <label>Author</label>
+            <label>Image Link</label>
             <input
               className="create-input"
               required
-              name="author"
-              value={author}
+              name="imgURL"
+              value={imgURL}
               type="text"
-              placeholder="Author"
+              placeholder="Image URL"
               onChange={handleChange}
             />
             <button id="sign-in-button" type="submit">
