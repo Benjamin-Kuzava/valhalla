@@ -20,8 +20,8 @@ const NewSlider = () => {
 
   return (
     <div className="newSlider">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      {/* <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} /> */}
       {newSliderData.map((slide, index) => {
         return (
           <div
