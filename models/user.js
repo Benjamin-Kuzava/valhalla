@@ -6,6 +6,7 @@ const User = new Schema(
     username: { type: String, required: true },
     email: { type: String, required: true },
     password_digest: { type: String, required: true },
+    listings: [{ type: Schema.Types.ObjectId, ref: "listings" }],
   },
   { timestamps: true }
 );
