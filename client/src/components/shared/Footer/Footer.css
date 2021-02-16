@@ -1,0 +1,66 @@
+.footer {
+  background: #456471;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+   align-items: center;
+  font-size: 1.2rem;
+}
+
+.footer-logo {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center; 
+  
+}
+
+.footer-logo h1 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 2.7rem;
+  letter-spacing: 0.1em;
+}
+
+
+
+.footer-text {
+  display: flex; 
+  justify-content: space-between;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 1em;
+}
+
+.footer-text a {
+  display: flex; 
+  justify-content: space-between;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 1em;
+}
+
+h4 {
+  display: flex; 
+  justify-content: space-between;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 1em;
+}
+
+img {
+  display: flex; 
+  justify-content: space-between;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+
