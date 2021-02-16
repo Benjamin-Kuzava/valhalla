@@ -34,13 +34,23 @@
   user-select: none;
   opacity: 0.5;
 }
-#brand {
+.title {
+  display: flex;
+  align-content: center;
+  justify-content: center;
   position: absolute;
-  margin-left: 10em;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 50px;
-  font-weight: bold;
+  color: #fff;
+  background-color: rgba(69, 100, 113, 0.6);
+  width: 100vw;
+  height: 4em;
+  font-family: "Roboto", sans-serif;
+  margin-top: 25em;
+  font-size: 20px;
+  font-weight: lighter;
+  padding-top: 1em;
+  padding-left: 22em;
+  padding-right: 22em;
+  letter-spacing: 0.1em;
 }
 .slide {
   opacity: 0;
