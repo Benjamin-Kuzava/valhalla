@@ -1,11 +1,11 @@
 import "../ImageSlider/ImageSlider.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-import { sliderData } from "./SliderData";
+import { newSliderData } from "./NewSliderData";
 
-const ImageSlider = () => {
+const NewSlider = () => {
   const [current, setCurrent] = useState(0);
-  const length = sliderData.length;
+  const length = newSliderData.length;
   const timeout = useRef(null);
 
   useEffect(() => {
@@ -14,24 +14,22 @@ const ImageSlider = () => {
     };
     timeout.current = setTimeout(nextSlide, 5000);
   }, [current, length]);
-
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1);
   const prevSlide = () => setCurrent(current === 0 ? length - 1 : current - 1);
-  if (!Array.isArray(sliderData) || sliderData.length <= 0) return null;
+  if (!Array.isArray(newSliderData) || newSliderData.length <= 0) return null;
 
   return (
-    <div className="slider">
+    <div className="newSlider">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-      {sliderData.map((slide, index) => {
+      {newSliderData.map((slide, index) => {
         return (
           <div
             className={index === current ? "slide active" : "slide"}
             key={index}
           >
-            <div className="title">{slide.title}</div>
             {index === current && (
-              <img src={slide.image} alt="island-image" className="image" />
+              <img src={slide.image2} alt="island-image" className="image" />
             )}
           </div>
         );
@@ -40,4 +38,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default NewSlider;

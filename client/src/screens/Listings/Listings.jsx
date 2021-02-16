@@ -6,8 +6,9 @@ import ListingCard from "../../components/ListingCard/ListingCard";
 import Search from "../../components/Search/Search";
 import { AZ, ZA, lowestFirst, highestFirst } from "../../utilities/sort";
 import "../../components/Search/Search.css";
-import ImageSlider from "../../components/ImageSlider/ImageSlider";
+import ImageSlider2 from "../../components/ImageSlider/ImageSlider";
 import Sort from "../../components/Sort/Sort";
+import NewSlider from "../../components/ImageSlider/NewSlider";
 
 const Listings = (props) => {
   const [allListings, setAllListings] = useState([]);
@@ -65,7 +66,7 @@ const Listings = (props) => {
   return (
     <Layout user={props.user}>
       <div>
-        <ImageSlider />
+        <NewSlider />
         <Search onSubmit={handleSubmit} onChange={handleSearch} />
         <Sort onSubmit={handleSubmit} onChange={handleSort} />
         <div className="listcard">{listingsJSX}</div>
