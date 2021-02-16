@@ -1,11 +1,12 @@
 const Listing = require("../models/listing");
+const User = require("../models/user");
 const db = require("../db/connection");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 const getListings = async (req, res) => {
   try {
-    const listings = await Listing.find(); // mongoose method
+    const listings = await Listing.find();
     res.json(listings);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -15,7 +16,7 @@ const getListings = async (req, res) => {
 const getListing = async (req, res) => {
   try {
     const { id } = req.params;
-    const listing = await Listing.findById(id); // mongoose method
+    const listing = await Listing.findById(id);
     if (listing) {
       return res.json(listing);
     }

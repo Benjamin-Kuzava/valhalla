@@ -14,6 +14,7 @@ import ImageSlider from "./components/ImageSlider/ImageSlider";
 //import { UserContext } from "./utilities/userContext";
 import About from "./screens/About/About";
 import Buy from "./screens/Buy/Buy";
+import UserListings from "./screens/UserListings/UserListings";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -34,33 +35,36 @@ const App = () => {
         <Route exact path="/">
           <Home user={user} />
         </Route>
-        <Route path="/sign-in">
+        <Route exact path="/sign-in">
           <SignIn setUser={setUser} />
         </Route>
-        <Route path="/sign-out">
+        <Route exact path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser} />
         </Route>
-        <Route path="/sign-up">
+        <Route exact path="/sign-up">
           <SignUp setUser={setUser} />
         </Route>
-        <Route path="/listings">
+        <Route exact path="/listings">
           <Listings user={user} />
         </Route>
-        <Route path="/add-listing">
+        <Route exact path="/add-listing">
           <ListingCreate user={user} />
         </Route>
-        <Route path="/edit-listing/:id">
+        <Route exact path="/edit-listing/:id">
           <ListingEdit user={user} />
         </Route>
-        <Route path="/listing/:id">
+        <Route exact path="/listing/:id">
           <ListingDetail user={user} />
         </Route>
         {/* </UserContext.Provider> */}
-        <Route path="/about">
+        <Route exact path="/about">
           <About user={user} />
         </Route>
-        <Route path="/buy">
+        <Route exact path="/buy">
           <Buy user={user} />
+        </Route>
+        <Route exact path="/listings/user-listings">
+          <UserListings user={user} />
         </Route>
       </Switch>
     </div>

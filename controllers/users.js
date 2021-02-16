@@ -26,6 +26,7 @@ const signUp = async (req, res) => {
     const payload = {
       username: user.username,
       email: user.email,
+      test: "hello",
     };
     const token = jwt.sign(payload, TOKEN_KEY); // create token
     res.status(201).json({ token });
@@ -43,6 +44,7 @@ const signIn = async (req, res) => {
       const payload = {
         username: user.username,
         email: user.email,
+        id: user._id,
       };
 
       const token = jwt.sign(payload, TOKEN_KEY); // signs user in
@@ -72,9 +74,36 @@ const changePassword = async (req, res) => {
   // not done
 };
 
+const getUsers = async (req, res) => {
+  try {
+    const users = await User.find().populate("listings");
+    if (users) {
+      return res.json(users);
+    }
+    res.status(404).json({ message: "Listing not found!" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+const getUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await User.findById(id).populate("listings");
+    if (user) {
+      return res.json(user);
+    }
+    res.status(404).json({ message: "Listing not found!" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
 module.exports = {
   signIn,
   signUp,
   verify,
   changePassword,
+  getUsers,
+  getUser,
 };
