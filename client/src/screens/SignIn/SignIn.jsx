@@ -78,6 +78,7 @@ const SignIn = (props) => {
               value={username}
               placeholder="Enter Username"
               onChange={handleChange}
+              autoFocus
             />
             <label>Password</label>
             <input

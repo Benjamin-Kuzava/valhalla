@@ -76,6 +76,7 @@ const SignUp = (props) => {
             value={username}
             placeholder="Enter username"
             onChange={handleChange}
+            autoFocus
           />
           <label>Email address</label>
           <input
