@@ -10,7 +10,6 @@ import ListingCreate from "./screens/ListingCreate/ListingCreate";
 import ListingEdit from "./screens/ListingEdit/ListingEdit";
 import ListingDetail from "./screens/ListingDetail/ListingDetail";
 import { verifyUser } from "./services/user"; // User Stuff
-import ImageSlider from "./components/ImageSlider/ImageSlider";
 //import { UserContext } from "./utilities/userContext";
 import About from "./screens/About/About";
 import Buy from "./screens/Buy/Buy";
@@ -27,10 +26,10 @@ const App = () => {
     };
     fetchUser();
   }, []);
+
   return (
     <div className="App">
       <Switch>
-        {/* <ImageSlider /> */}
         {/* <UserContext.Provider value={providerValue}> */}
         <Route exact path="/">
           <Home user={user} />
