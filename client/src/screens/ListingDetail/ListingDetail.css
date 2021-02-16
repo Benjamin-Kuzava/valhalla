@@ -84,7 +84,7 @@
   width: 100%;
   background: #f4a261;
   border: 1px solid transparent;
-  text-decoration: none;
+  text-transform: inherit;
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
@@ -95,6 +95,7 @@
   color: #e76f51;
   border: 1px solid #e76f51;
   transition: 250ms;
+  text-transform: none;
 }
 
 .edit-buttons {
