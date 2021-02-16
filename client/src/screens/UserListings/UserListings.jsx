@@ -4,17 +4,16 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getUser } from "../../services/user";
 import ListingCard from "../../components/ListingCard/ListingCard";
 
-const UserListings = (props) => {
+const UserListings = ({ user }) => {
   const [listings, setListings] = useState([]);
 
   useEffect(() => {
     const fetchUser = async () => {
-      const id = props.user.id;
-      const currentUser = await getUser(id);
+      const currentUser = await getUser(user.id);
       setListings(currentUser.listings);
     };
-    fetchUser();
-  }, []);
+    user && fetchUser();
+  }, [user]);
 
   const listingsJSX = listings.map((listing, index) => (
     <ListingCard
@@ -27,7 +26,7 @@ const UserListings = (props) => {
   ));
 
   return (
-    <Layout user={props.user}>
+    <Layout user={user}>
       <div className="listcard user-listings">{listingsJSX}</div>
     </Layout>
   );
