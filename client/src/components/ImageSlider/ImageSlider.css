@@ -5,16 +5,15 @@
   align-items: center;
 }
 .image {
+  margin: 0 auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 100vw;
   height: 40em;
   object-fit: cover;
 }
 .right-arrow {
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 32px;
   font-size: 3rem;
   color: #fff;
@@ -25,7 +24,7 @@
 }
 .left-arrow {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 32px;
   font-size: 3rem;
   color: #fff;
