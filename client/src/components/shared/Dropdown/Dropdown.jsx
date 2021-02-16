@@ -11,6 +11,9 @@ const Dropdown = ({ user }) => {
         <div className="user-info">Logged in as: {user && user.username}</div>
       </li>
       <li className="dropdown-hover">
+        <NavLink to={`/listings/user-listings`}>Manage Listings</NavLink>
+      </li>
+      <li className="dropdown-hover">
         <NavLink to="/sign-out" className="dropdown-link">
           Sign Out
         </NavLink>

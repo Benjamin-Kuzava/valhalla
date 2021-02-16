@@ -35,7 +35,7 @@ export const signOut = async (user) => {
 export const verifyUser = async () => {
   const token = localStorage.getItem("token");
   if (token) {
-    const response = await api.get("/verify");
+    const response = await api.get("/users/verify");
     return response.data;
   }
   return false;
@@ -45,6 +45,24 @@ export const verifyUser = async () => {
 export const changePassword = async (passwords, user) => {
   try {
     const response = await api.post("/");
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getUsers = async () => {
+  try {
+    const response = await api.get("users/");
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getUser = async (id) => {
+  try {
+    const response = await api.get(`users/${id}`);
     return response.data;
   } catch (error) {
     throw error;
