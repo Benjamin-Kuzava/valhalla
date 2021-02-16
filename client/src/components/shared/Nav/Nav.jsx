@@ -68,7 +68,7 @@ const Nav = ({ user }) => {
 
           <li className="nav-item">
             <NavLink
-              to="/sign-up"
+              to="/sign-in"
               className="nav-links-mobile"
               onClick={closeMobileMenu}
             >
@@ -82,11 +82,7 @@ const Nav = ({ user }) => {
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         >
-          <NavLink
-            to="/sign-in"
-            className="nav-links"
-            onClick={closeMobileMenu}
-          >
+          <NavLink to="#" className="nav-links" onClick={closeMobileMenu}>
             {user ? "Profile " : "Log in "}
             <i className="fas fa-caret-down" />
           </NavLink>

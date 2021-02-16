@@ -34,7 +34,7 @@ const ListingCreate = (props) => {
 
   const { name, price, description, imgURL } = listing;
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="background">
         <div className="create-page"></div>
         <div className="create-container">
@@ -49,6 +49,7 @@ const ListingCreate = (props) => {
               value={name}
               placeholder="Enter Name of Property"
               onChange={handleChange}
+              autoFocus
             />
             <label>Price</label>
             <input
