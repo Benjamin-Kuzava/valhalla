@@ -4,7 +4,7 @@ const User = require("../models/user");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-// ben1, bob1, damion1, vinny1
+// ben1, damion1, daniel1, vinny1
 
 const main = async () => {
   // Add users to database
@@ -12,25 +12,25 @@ const main = async () => {
     username: "Benjamin",
     email: "ben@ben.com",
     password_digest:
-      "$2b$11$KK0Y4oVyLALjolTPnKyxyOlzvT/i.tEJ4NQC5M6y.dgc23nMxbmaW",
+      "2b$11$KF.y9Q9uGxrdXtsGUAsR.uaifffYIMll1DDdB3lptd63uwEcSUrS2",
     listings: [],
   });
   await user1.save();
 
   const user2 = new User({
-    username: "Bob",
-    email: "bob@bob.com",
+    username: "Damion",
+    email: "damion@damion.com",
     password_digest:
-      "$2b$11$KK0Y4oVyLALjolTPnKyxyOlzvT/i.tEJ4NQC5M6y.dgc23nMxbmaW",
+      "$2b$11$QXT/xsTAnITwnSDQz3NFa.mhfYJ.iKjmYbzXhdwBpVLljrUKvxKeq",
     listings: [],
   });
   await user2.save();
 
   const user3 = new User({
-    username: "Damion",
-    email: "damion@damion.com",
+    username: "Daniel",
+    email: "dan@dan.com",
     password_digest:
-      "$2b$11$KK0Y4oVyLALjolTPnKyxyOlzvT/i.tEJ4NQC5M6y.dgc23nMxbmaW",
+      "$2b$11$mhLJetTHxMobSRY8e09Jiu93v1Bu72xPk5.o1VRcKSWYziNOx.GVO",
     listings: [],
   });
   await user3.save();
@@ -39,7 +39,7 @@ const main = async () => {
     username: "Vinny",
     email: "vinny@vinny.com",
     password_digest:
-      "$2b$11$KK0Y4oVyLALjolTPnKyxyOlzvT/i.tEJ4NQC5M6y.dgc23nMxbmaW",
+      "$2b$11$ScWViumW7sRjNSeg6mwO5uf5gwx98RKsmj/m10sEGgVVt/5MdPglW",
     listings: [],
   });
   await user4.save();

@@ -3,7 +3,7 @@ import jwtDecode from "jwt-decode";
 
 export const signUp = async (credentials) => {
   try {
-    const response = await api.post("/sign-up", credentials);
+    const response = await api.post("/users/sign-up", credentials);
     localStorage.setItem("token", response.data.token);
     const user = jwtDecode(response.data.token);
     return user;
@@ -14,7 +14,7 @@ export const signUp = async (credentials) => {
 
 export const signIn = async (credentials) => {
   try {
-    const response = await api.post("/sign-in", credentials);
+    const response = await api.post("/users/sign-in", credentials);
     localStorage.setItem("token", response.data.token);
     const user = jwtDecode(response.data.token);
     return user;
