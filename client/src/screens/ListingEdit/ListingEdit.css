@@ -12,7 +12,6 @@
   margin: 0 2em;
 }
 
-
 .image-container {
   display: flex;
   flex-direction: row;
@@ -35,10 +34,10 @@
 }
 
 .input-name {
-/* display:flex;
+  /* display:flex;
 margin-bottom: 3em;
 height: 2.1em; */
-width: 80%;
+  width: 80%;
   margin-top: 0.7rem;
   margin-left: 10%;
   margin-bottom: 25px;
@@ -74,7 +73,6 @@ width: 80%;
   border-radius: 4px;
   border: 1px solid rgb(214, 214, 214);
   padding-left: 0.5em;
-  
 }
 
 .textarea-description {
@@ -84,6 +82,7 @@ width: 80%;
   margin-top: 0.7rem;
   margin-left: 10%;
   margin-bottom: 25px;
+  resize: none;
   /* height: 0px; */
   border-radius: 4px;
   border: 1px solid rgb(214, 214, 214);
@@ -106,5 +105,4 @@ width: 80%;
   font-weight: 200;
   cursor: pointer;
   transition: box-shadow 0.4s ease;
-
 }

@@ -58,7 +58,7 @@
   bottom: 0.75em;
   left: 0;
   background-color: #fff;
-  height: 7px;
+  height: 2px;
   border-radius: 4px;
   transform: scaleX(0);
   transition: transform ease-in-out 250ms;

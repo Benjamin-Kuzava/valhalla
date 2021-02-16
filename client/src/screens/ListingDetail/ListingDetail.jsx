@@ -7,9 +7,17 @@ import {
   deleteListing,
 } from "../../services/listings";
 import "./ListingDetail.css";
-import { useParams, Redirect, Link } from "react-router-dom";
-import ListingEdit from "../../screens/ListingEdit/ListingEdit"
+import {
+  useParams,
+  Redirect,
+  Link,
+  history,
+  useHistory,
+} from "react-router-dom";
+import ListingEdit from "../../screens/ListingEdit/ListingEdit";
 import Recommended from "../../components/Recommended/Recommended";
+
+import Buy from "../Buy/Buy";
 
 const ListingDetail = (props) => {
   const [allListings, setAllListings] = useState([]);
@@ -17,7 +25,7 @@ const ListingDetail = (props) => {
   const [isUpdated, setIsUpdated] = useState(false);
   const params = useParams();
   const { id } = params;
-
+  const history = useHistory();
   useEffect(() => {
     const fetchListing = async () => {
       const listing = await getListing(id);
@@ -69,14 +77,23 @@ const ListingDetail = (props) => {
         <div className="listing-details-container">
           <h2 className="detail-title">{listing.name}</h2>
           <h5>{listing.price}</h5>
-          <button className="buy-button">Buy Now</button>
+          <button className="buy-button" onClick={() => history.push("/buy")}>
+            Buy Now
+          </button>
           <div className="details-container">
             <p className="detail-label">Details</p>
             <p className="detail-description">{listing.description}</p>
           </div>
           {props.user && (
             <div className="edit-buttons">
-              <button className="edit-button"><Link className="edit-link1" to={`/edit-listing/${listing._id}`}>Edit</Link></button>
+              <button className="edit-button">
+                <Link
+                  className="edit-link1"
+                  to={`/edit-listing/${listing._id}`}
+                >
+                  Edit
+                </Link>
+              </button>
               <button className="delete-button" onClick={() => handleDelete()}>
                 Delete
               </button>
