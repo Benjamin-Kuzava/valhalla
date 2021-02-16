@@ -72,6 +72,18 @@ const changePassword = async (req, res) => {
   // not done
 };
 
+const getUsers = async (req, res) => {
+  try {
+    const users = await User.find().populate("listings");
+    if (users) {
+      return res.json(users);
+    }
+    res.status(404).json({ message: "Listing not found!" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
 const getUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -90,5 +102,6 @@ module.exports = {
   signUp,
   verify,
   changePassword,
+  getUsers,
   getUser,
 };

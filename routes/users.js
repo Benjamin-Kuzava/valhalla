@@ -9,6 +9,7 @@ router.post("/sign-up", controllers.signUp);
 router.post("/sign-in", controllers.signIn);
 router.get("/verify", controllers.verify);
 router.get("/:id", controllers.getUser);
+router.get("/", controllers.getUsers);
 router.post("/change-password", controllers.changePassword); // not created
 
 module.exports = router;
