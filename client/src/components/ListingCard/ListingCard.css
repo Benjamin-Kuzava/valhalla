@@ -67,3 +67,17 @@ a {
   -clr-dark-orange: #f4a261;
   -clr-light-orange: #e76f51;
 }
+
+@media screen and (max-width: 625px) {
+  .img-listing {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .img-listing {
+    height: 200px;
+    width: 300px;
+  }
+}

@@ -36,7 +36,6 @@ const ListingCreate = (props) => {
   return (
     <Layout user={props.user}>
       <div className="background">
-        <div className="create-page"></div>
         <div className="create-container">
           <h3>Create A Listing</h3>
           <form onSubmit={handleSubmit}>
