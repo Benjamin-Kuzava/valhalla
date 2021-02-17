@@ -46,7 +46,7 @@ h3 {
   cursor: pointer;
   transition: box-shadow 0.4s ease;
 }
-label {
+.label-sign {
   margin-left: 2em;
   margin-bottom: 1em;
 }
