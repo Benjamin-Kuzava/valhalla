@@ -1,8 +1,6 @@
 .footer {
   background: #456471;
-  position: sticky;
   height: 100%;
-  /* width: 100%; */
   display: flex;
   justify-content: center; 
    align-items: center;
@@ -48,7 +46,7 @@
   padding: 1em;
 }
 
-h4 {
+footer-h4 {
   display: flex; 
   justify-content: space-between;
   color: #fff;
@@ -59,7 +57,7 @@ h4 {
   font-weight: 500;
 }
 
-img {
+.footer-img {
   display: flex; 
   justify-content: space-between;
   cursor: pointer;
