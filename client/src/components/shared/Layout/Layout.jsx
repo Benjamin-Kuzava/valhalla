@@ -9,7 +9,7 @@ const Layout = (props) => {
       <Nav user={props.user} />
       {/* screens go below */}
       {props.children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
