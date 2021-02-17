@@ -7,13 +7,7 @@ import {
   deleteListing,
 } from "../../services/listings";
 import "./ListingDetail.css";
-import {
-  useParams,
-  Redirect,
-  Link,
-  history,
-  useHistory,
-} from "react-router-dom";
+import { useParams, Redirect, useHistory } from "react-router-dom";
 import Recommended from "../../components/Recommended/Recommended";
 
 const ListingDetail = ({ user }) => {
@@ -92,6 +86,7 @@ const ListingDetail = ({ user }) => {
           </button>
           <div className="details-container">
             <p className="detail-label">Details</p>
+            <hr className="linebreak"></hr>
             <p className="detail-description">{listing.description}</p>
           </div>
           {user && user.id === listing.userId && buttons}

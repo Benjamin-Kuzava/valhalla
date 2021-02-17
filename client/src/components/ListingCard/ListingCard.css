@@ -46,6 +46,7 @@ a {
   font-weight: 1000;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
+  max-width: 80vw;
 }
 
 .h3-listing {
@@ -66,4 +67,18 @@ a {
   -clr-yellow: #e9c46a;
   -clr-dark-orange: #f4a261;
   -clr-light-orange: #e76f51;
+}
+
+@media screen and (max-width: 625px) {
+  .img-listing {
+    height: 300px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .img-listing {
+    height: 200px;
+    width: 300px;
+  }
 }

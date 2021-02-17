@@ -10,6 +10,7 @@ const ListingCreate = (props) => {
     imgURL: "",
     description: "",
     price: "",
+    userId: props.user.id,
   });
 
   const [isCreated, setCreated] = useState(false);
@@ -36,11 +37,10 @@ const ListingCreate = (props) => {
   return (
     <Layout user={props.user}>
       <div className="background">
-        <div className="create-page"></div>
         <div className="create-container">
           <h3>Create A Listing</h3>
-          <form onSubmit={handleSubmit}>
-            <label>Name of Property</label>
+          <form onSubmit={handleSubmit} className="create-form">
+            <label className="label-create">Name of Property</label>
             <input
               className="create-input"
               required
@@ -51,7 +51,7 @@ const ListingCreate = (props) => {
               onChange={handleChange}
               autoFocus
             />
-            <label>Price</label>
+            <label className="label-create">Price</label>
             <input
               className="create-input"
               required
@@ -61,7 +61,7 @@ const ListingCreate = (props) => {
               placeholder="Enter Price in USD"
               onChange={handleChange}
             />
-            <label>Description</label>
+            <label className="label-create">Description</label>
             <textarea
               className="create-description"
               rows={10}
@@ -73,7 +73,7 @@ const ListingCreate = (props) => {
               placeholder="Description"
               onChange={handleChange}
             />
-            <label>Image Link</label>
+            <label className="label-create">Image Link</label>
             <input
               className="create-input"
               required
