@@ -10,6 +10,7 @@ const ListingCreate = (props) => {
     imgURL: "",
     description: "",
     price: "",
+    userId: props.user.id,
   });
 
   const [isCreated, setCreated] = useState(false);
