@@ -1,6 +1,3 @@
-.page-signup {
-  height: 10rem;
-}
 .form-container {
   position: relative;
   margin: 0 auto;
@@ -9,4 +6,17 @@
   border-radius: 4px;
   box-shadow: 3px 3px 10px #333;
   padding: 15px;
+  top: 10em;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    width: 100%;
+    height: 100%;
+    top: 5em;
+  }
+
+  label {
+    display: none;
+  }
 }

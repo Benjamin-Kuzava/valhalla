@@ -64,38 +64,39 @@ const SignIn = (props) => {
 
   return (
     <Layout>
-      <div className="page"></div>
-      <div className="page-container">
-        <h3>Sign In</h3>
-        <div className="form-container1">
-          <form onSubmit={onSignIn}>
-            <label>Username</label>
-            <input
-              className="sign-in-input"
-              required
-              type="text"
-              name="username"
-              value={username}
-              placeholder="Enter Username"
-              onChange={handleChange}
-              autoFocus
-            />
-            <label>Password</label>
-            <input
-              className="sign-in-input"
-              required
-              name="password"
-              value={password}
-              type="password"
-              placeholder="Password"
-              onChange={handleChange}
-            />
-            {renderError()}
-          </form>
-          <div className="signup">
-            <NavLink to="/sign-up" className="register">
-              <h4>Dont have an Account? Register</h4>
-            </NavLink>
+      <div className="background">
+        <div className="page-container">
+          <h3>Sign In</h3>
+          <div className="form-container1">
+            <form onSubmit={onSignIn}>
+              <label>Username</label>
+              <input
+                className="sign-in-input"
+                required
+                type="text"
+                name="username"
+                value={username}
+                placeholder="Enter Username"
+                onChange={handleChange}
+                autoFocus
+              />
+              <label>Password</label>
+              <input
+                className="sign-in-input"
+                required
+                name="password"
+                value={password}
+                type="password"
+                placeholder="Password"
+                onChange={handleChange}
+              />
+              {renderError()}
+            </form>
+            <div className="signup">
+              <NavLink to="/sign-up" className="register">
+                <h4>Dont have an Account? Register</h4>
+              </NavLink>
+            </div>
           </div>
         </div>
       </div>
