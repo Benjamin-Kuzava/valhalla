@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: -7em;
+  /* margin-bottom: -7em; */
   text-decoration: none;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .listing-title-box {
-  height: 10em;
+  height: 4em;
   margin-bottom: 2em;
 }
 
