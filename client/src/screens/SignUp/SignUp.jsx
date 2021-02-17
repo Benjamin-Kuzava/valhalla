@@ -67,7 +67,7 @@ const SignUp = (props) => {
         <div className="form-container">
           <h3>Sign Up</h3>
           <form onSubmit={onSignUp}>
-            <label>Username</label>
+            <label className="label-sign">Username</label>
             <input
               className="sign-in-input"
               required
@@ -78,7 +78,7 @@ const SignUp = (props) => {
               onChange={handleChange}
               autoFocus
             />
-            <label>Email address</label>
+            <label className="label-sign">Email address</label>
             <input
               className="sign-in-input"
               required
@@ -88,7 +88,7 @@ const SignUp = (props) => {
               placeholder="Enter email"
               onChange={handleChange}
             />
-            <label>Password</label>
+            <label className="label-sign">Password</label>
             <input
               className="sign-in-input"
               required
@@ -98,7 +98,7 @@ const SignUp = (props) => {
               placeholder="Password"
               onChange={handleChange}
             />
-            <label>Password Confirmation</label>
+            <label className="label-sign">Password Confirmation</label>
             <input
               className="sign-in-input"
               required
