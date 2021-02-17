@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import ListingCard from "../../ListingCard/ListingCard";
 import Dropdown from "../Dropdown/Dropdown";
 import "./Nav.css";
 
@@ -20,6 +19,19 @@ const Nav = ({ user }) => {
     setDropdown(window.innerWidth > 960 ? true : false);
 
   const onMouseLeave = () => setDropdown(false);
+
+  const manageListings = (
+    <li className="nav-item nav-hover">
+      <NavLink
+        to="/listings/user-listings"
+        className="nav-links hidden"
+        onClick={closeMobileMenu}
+        activeStyle={activeStyle}
+      >
+        Manage Listings
+      </NavLink>
+    </li>
+  );
 
   return (
     <>
@@ -46,7 +58,7 @@ const Nav = ({ user }) => {
 
           <li className="nav-item nav-hover">
             <NavLink
-              to="/add-listing"
+              to={user ? "/add-listing" : "/sign-in"}
               className="nav-links"
               onClick={closeMobileMenu}
               activeStyle={activeStyle}
@@ -66,13 +78,15 @@ const Nav = ({ user }) => {
             </NavLink>
           </li>
 
+          {user && manageListings}
+
           <li className="nav-item">
             <NavLink
-              to="/sign-in"
+              to={user ? "/sign-out" : "/sign-in"}
               className="nav-links-mobile"
               onClick={closeMobileMenu}
             >
-              Log in
+              {user ? "Sign out" : "Log in"}
             </NavLink>
           </li>
         </ul>
