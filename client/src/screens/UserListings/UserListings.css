@@ -1,6 +1,6 @@
 .user-listings {
   padding-top: 10em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 420px) {

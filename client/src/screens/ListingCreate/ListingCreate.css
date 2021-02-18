@@ -1,12 +1,11 @@
 .create-container {
-  position: relative;
   margin: 0 auto;
+  margin-top: 8em;
   background: #ecf0f1;
   max-width: 40em;
   border-radius: 4px;
   box-shadow: 3px 3px 10px #333;
   padding: 15px;
-  top: 10em;
 }
 h3 {
   text-align: center;
@@ -74,6 +73,9 @@ h4 {
   height: 100vh;
   background-image: url(https://images.pexels.com/photos/3601422/pexels-photo-3601422.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 600px) {
