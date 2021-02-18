@@ -33,7 +33,9 @@ const ImageSlider = () => {
             {index === current && (
               <>
                 <img src={slide.image} alt="island-image" className="image" />
-                <div className="slider-title">{slide.title}</div>
+                {window.innerWidth > 420 ? (
+                  <div className="slider-title">{slide.title}</div>
+                ) : null}
               </>
             )}
           </div>
