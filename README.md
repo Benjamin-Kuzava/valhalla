@@ -32,6 +32,7 @@ const Listing = new Schema(
     description: { type: String, required: true },
     price: { type: Number, required: true },
     location: {type: String, required: true},
+    userId: { type: Schema.Types.ObjectId, ref: "users" },
 
   },
   { timestamps: true }
@@ -46,6 +47,7 @@ const User = new Schema(
     username: { type: String, required: true },
     email: { type: String, required: true },
     password_digest: { type: String, required: true },
+    listings: [{ type: Schema.Types.ObjectId, ref: "listings" }],
   },
   { timestamps: true }
 );
