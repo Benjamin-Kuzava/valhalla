@@ -32,7 +32,6 @@ const ListingEdit = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // let  id  = props.match.params
     const updated = await updateListing(id, listing);
     setUpdated(updated);
   };
@@ -44,14 +43,13 @@ const ListingEdit = (props) => {
   return (
     <Layout user={props.user}>
       <div className="listing-edit">
-        <div className="image-container">
+        <div className="edit-image-container">
           <img
             className="edit-listing-image"
             src={listing.imgURL}
             alt={listing.name}
           />
         </div>
-        {/* <div  className="form-container"> */}
         <form className="edit-form" onSubmit={handleSubmit}>
           <input
             className="input-name"
@@ -92,7 +90,6 @@ const ListingEdit = (props) => {
             Save
           </button>
         </form>
-        {/* </div> */}
       </div>
     </Layout>
   );

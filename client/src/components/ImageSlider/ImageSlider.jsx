@@ -8,12 +8,12 @@ const ImageSlider = () => {
   const length = sliderData.length;
   const timeout = useRef(null);
 
-  // useEffect(() => {
-  //   const nextSlide = () => {
-  //     setCurrent(current === length - 1 ? 0 : current + 1);
-  //   };
-  //   timeout.current = setTimeout(nextSlide, 5000);
-  // }, [current, length]);
+  useEffect(() => {
+    const nextSlide = () => {
+      setCurrent(current === length - 1 ? 0 : current + 1);
+    };
+    timeout.current = setTimeout(nextSlide, 5000);
+  }, [current, length]);
 
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1);
   const prevSlide = () => setCurrent(current === 0 ? length - 1 : current - 1);
@@ -32,7 +32,9 @@ const ImageSlider = () => {
             {index === current && (
               <>
                 <img src={slide.image} alt="island-image" className="image" />
-                <div className="slider-title">{slide.title}</div>
+                {window.innerWidth > 420 ? (
+                  <div className="slider-title">{slide.title}</div>
+                ) : null}
               </>
             )}
           </div>
