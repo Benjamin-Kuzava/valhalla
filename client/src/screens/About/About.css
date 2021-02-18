@@ -71,6 +71,11 @@ p {
 }
 @media screen and (max-width: 375px) {
   .about-us-container {
-    padding-top: 25rem;
+    padding-top: 8em;
+    height: 100%;
+  }
+
+  .paragraph p {
+    margin-bottom: 2em;
   }
 }
