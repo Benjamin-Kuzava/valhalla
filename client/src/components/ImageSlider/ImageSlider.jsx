@@ -13,6 +13,7 @@ const ImageSlider = () => {
       setCurrent(current === length - 1 ? 0 : current + 1);
     };
     timeout.current = setTimeout(nextSlide, 5000);
+    return () => clearTimeout(timeout.current);
   }, [current, length]);
 
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1);
