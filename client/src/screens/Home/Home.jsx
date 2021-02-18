@@ -19,11 +19,13 @@ const Home = (props) => {
             <h2>What makes us different?</h2>
             <hr className="linebreak"></hr>
             <p>
-              we sell islands because why not? Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Neque,{" "}
-              <span className="highlight-light">reprehenderit alias</span> ullam
-              non perspiciatis fugit odio aliquid itaque sint dolor beatae sed?
-              Voluptatem dicta, consequuntur deleniti adipisci a dolores cumque.
+              At Valhalla Inc., the foremost global marketplace for private
+              island sales and rentals, we sell islands because{" "}
+              <span className="highlight-light">why not</span>. Whether you are
+              in the market to purchase your dream island or ready to sell your
+              prized property, we are{" "}
+              <span className="highlight-light">100 percent </span>dedicated to
+              the world of private islands.
             </p>
           </div>
         </div>
@@ -32,11 +34,12 @@ const Home = (props) => {
             <h2>Explore islands you'll never afford</h2>
             <hr className="linebreak"></hr>
             <p>
-              branding info buy an island beacuse all the cool rich people are
-              doing it. Lorem{" "}
-              <span className="highlight-dark">ipsum dolor sit amet</span>{" "}
-              consectetur adipisicing elit. Enim ab ratione impedit atque itaque
-              laudantium.
+              For those who want peace and complete{" "}
+              <span className="highlight-dark">seclusion</span>, having a
+              private island is the only way to go. Frankly, if you don't own
+              your own island, you're not doing it right. A{" "}
+              <span className="highlight-dark">large slice of heaven </span>
+              for a small slice of cash.
             </p>
             <button
               className="explore-button"
