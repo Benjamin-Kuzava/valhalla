@@ -47,7 +47,6 @@
   align-items: center;
   background-color: #48b6a9;
   padding: 5em 0;
-  /* height: 45vh; */
 }
 
 .explore-info-container {
@@ -152,5 +151,14 @@
   .highlight-dark,
   .highlight-light {
     font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about-info p {
+    max-width: 80vw;
+  }
+  .explore-info p {
+    max-width: 80vw;
   }
 }

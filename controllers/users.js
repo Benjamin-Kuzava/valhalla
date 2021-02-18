@@ -70,10 +70,6 @@ const verify = async (req, res) => {
   }
 };
 
-const changePassword = async (req, res) => {
-  // not done
-};
-
 const getUsers = async (req, res) => {
   try {
     const users = await User.find().populate("listings");
@@ -103,7 +99,6 @@ module.exports = {
   signIn,
   signUp,
   verify,
-  changePassword,
   getUsers,
   getUser,
 };

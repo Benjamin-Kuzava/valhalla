@@ -40,7 +40,6 @@ const createListing = async (req, res) => {
 const updateListing = async (req, res) => {
   const { id } = req.params;
   await Listing.findByIdAndUpdate(
-    // mongoose method
     id,
     req.body,
     { new: true },

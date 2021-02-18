@@ -11,7 +11,7 @@ const Layout = (props) => {
         {/* screens go below */}
         {props.children}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

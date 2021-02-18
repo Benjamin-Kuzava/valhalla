@@ -41,16 +41,6 @@ export const verifyUser = async () => {
   return false;
 };
 
-// Not finished
-export const changePassword = async (passwords, user) => {
-  try {
-    const response = await api.post("/");
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
-};
-
 export const getUsers = async () => {
   try {
     const response = await api.get("users/");
