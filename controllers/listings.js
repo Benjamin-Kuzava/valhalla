@@ -28,8 +28,20 @@ const getListing = async (req, res) => {
 
 const createListing = async (req, res) => {
   try {
-    const listing = await new Listing(req.body);
+    const { userId } = req.body;
+    const user = await User.findById(userId);
+    const listingPayload = {
+      name: req.body.name,
+      imgURL: req.body.imgURL,
+      description: req.body.description,
+      price: req.body.price,
+    };
+    const listing = await new Listing(listingPayload);
     await listing.save();
+    listing.userId = user;
+    await listing.save();
+    user.listings.push(listing);
+    await user.save();
     res.status(201).json(listing);
   } catch (error) {
     console.log(error);
@@ -40,7 +52,6 @@ const createListing = async (req, res) => {
 const updateListing = async (req, res) => {
   const { id } = req.params;
   await Listing.findByIdAndUpdate(
-    // mongoose method
     id,
     req.body,
     { new: true },

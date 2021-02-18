@@ -1,13 +1,12 @@
 const jwt = require("jsonwebtoken");
-const TOKEN_KEY = "somethingsupercoolandcomplicated"; // Hard-coded token key?
+const TOKEN_KEY = "somethingsupercoolandcomplicated";
 
 // Express custom middleware
 const restrict = (req, res, next) => {
   try {
-    const token = req.headers.authorization.split(" ")[1]; // takes the token from req.headers
+    const token = req.headers.authorization.split(" ")[1];
     const data = jwt.verify(token, TOKEN_KEY);
-    // res.locals.user = data
-    next(); // procede to next step in controller
+    next();
   } catch (error) {
     console.log(error);
     res.status(403).send("Unauthorized access");

@@ -26,6 +26,7 @@ export const createListing = async (listing) => {
     throw error;
   }
 };
+// convert to put to pass in userId
 
 export const updateListing = async (id, listing) => {
   try {
