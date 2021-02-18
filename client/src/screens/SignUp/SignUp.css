@@ -1,12 +1,10 @@
 .form-container {
-  position: relative;
   margin: 0 auto;
   background: #ecf0f1;
   width: 350px;
   border-radius: 4px;
   box-shadow: 3px 3px 10px #333;
   padding: 15px;
-  top: 10em;
 }
 
 @media screen and (max-width: 600px) {
