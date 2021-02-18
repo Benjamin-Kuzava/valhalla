@@ -86,6 +86,10 @@
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 1060px) {
   .NavbarItems {
     position: relative;
@@ -126,14 +130,14 @@
   .navbar-logo {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -1em;
     transform: translate(25%, 50%);
   }
 
   .menu-icon {
     display: block;
     position: absolute;
-    top: 0;
+    top: 0.2em;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
@@ -170,5 +174,9 @@
 
   .nav-hover::before {
     display: none;
+  }
+
+  .hidden {
+    display: inline;
   }
 }

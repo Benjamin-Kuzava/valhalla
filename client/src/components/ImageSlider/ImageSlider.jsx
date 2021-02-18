@@ -13,6 +13,7 @@ const ImageSlider = () => {
       setCurrent(current === length - 1 ? 0 : current + 1);
     };
     timeout.current = setTimeout(nextSlide, 5000);
+    return () => clearTimeout(timeout.current);
   }, [current, length]);
 
   const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1);
@@ -29,9 +30,13 @@ const ImageSlider = () => {
             className={index === current ? "slide active" : "slide"}
             key={index}
           >
-            <div className="title">{slide.title}</div>
             {index === current && (
-              <img src={slide.image} alt="island-image" className="image" />
+              <>
+                <img src={slide.image} alt="island-image" className="image" />
+                {window.innerWidth > 420 ? (
+                  <div className="slider-title">{slide.title}</div>
+                ) : null}
+              </>
             )}
           </div>
         );

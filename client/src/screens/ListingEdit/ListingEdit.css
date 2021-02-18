@@ -1,108 +1,92 @@
 .listing-edit {
   display: flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
-  padding: 10em 10em 8em;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10em;
   margin: 0 auto;
+  max-width: 70vw;
 }
 
 .listing-edit > * {
-  flex: 1 1 40em;
-  width: 40em;
-  margin: 0 2em;
-}
-
-.image-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  height: fit-content;
-  align-self: center;
-}
-
-.edit-listing-image {
-  display: flex;
-  margin-top: 20px;
+  margin: 2em;
 }
 
 .edit-form {
   display: flex;
   flex-direction: column;
-  margin: 10em;
-  /* padding: 8em; */
+}
+
+.edit-form > * {
+  background-color: #fafafa;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin: 0.5rem 0;
+  color: rgb(77, 77, 77);
+  width: 100%;
 }
 
 .input-name {
-  /* display:flex;
-margin-bottom: 3em;
-height: 2.1em; */
-  width: 80%;
-  margin-top: 0.7rem;
-  margin-left: 10%;
-  margin-bottom: 25px;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid rgb(214, 214, 214);
-  padding-left: 0.5em;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 1000;
+  font-family: "Roboto", sans-serif;
 }
 
 .input-price {
-  /* display:flex;
-  margin-bottom: 3em;
-  height: 2.1em; */
-  width: 80%;
-  margin-top: 0.7rem;
-  margin-left: 10%;
-  margin-bottom: 25px;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid rgb(214, 214, 214);
-  padding-left: 0.5em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
 }
 
 .input-image-link {
-  /* display:flex;
-  margin-bottom: 3em;
-  height: 2.1em; */
-  width: 80%;
-  margin-top: 0.7rem;
-  margin-left: 10%;
-  margin-bottom: 25px;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid rgb(214, 214, 214);
-  padding-left: 0.5em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
 }
 
 .textarea-description {
-  /* display:flex;
-  margin-bottom: 3em; */
-  width: 80%;
-  margin-top: 0.7rem;
-  margin-left: 10%;
-  margin-bottom: 25px;
-  resize: none;
-  /* height: 0px; */
-  border-radius: 4px;
-  border: 1px solid rgb(214, 214, 214);
-  padding-left: 0.5em;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-family: "Domine", serif;
+  overflow-y: auto;
 }
 
 .save-button {
-  width: 80%;
+  width: 100%;
   margin-top: 0.7rem;
-  margin-left: 10%;
   margin-bottom: 25px;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid rgb(214, 214, 214);
+  border: 2px solid rgb(214, 214, 214);
   padding-left: 0.5em;
   background: #456471;
   border: none;
-  color: white;
+  color: #fafafa;
   font-size: 18px;
   font-weight: 200;
   cursor: pointer;
-  transition: box-shadow 0.4s ease;
+  transition: all 0.3s ease-in-out;
+}
+
+.save-button:hover {
+  transition: all 0.3s ease-in-out;
+  color: #456471;
+  background-color: #fafafa;
+  border: 2px solid #456471;
+}
+
+@media screen and (max-width: 1440px) {
+  .listing-edit {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .edit-listing-image {
+    display: none;
+  }
+  .listing-edit {
+    max-width: 100vw;
+    padding-top: 2em;
+  }
 }

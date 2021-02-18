@@ -26,10 +26,10 @@ option {
   font-family: "Roboto", sans-serif;
 }
 
-/* @media (max-width: 500px) {
+@media (max-width: 500px) {
   .sort-container {
     width: 100%;
     justify-content: center;
     margin: 0px;
   }
-} */
+}

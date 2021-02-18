@@ -9,7 +9,7 @@ const Home = (props) => {
 
   return (
     <Layout user={props.user}>
-      <div id="home-container">
+      <div className="home-container">
         <div className="slider-container">
           <ImageSlider />
         </div>
@@ -17,6 +17,7 @@ const Home = (props) => {
           <div className="about-info-container"></div>
           <div className="about-info">
             <h2>What makes us different?</h2>
+            <hr className="linebreak"></hr>
             <p>
               we sell islands because why not? Lorem ipsum dolor, sit amet
               consectetur adipisicing elit. Neque,{" "}
@@ -29,6 +30,7 @@ const Home = (props) => {
         <div className="explore-container">
           <div className="explore-info">
             <h2>Explore islands you'll never afford</h2>
+            <hr className="linebreak"></hr>
             <p>
               branding info buy an island beacuse all the cool rich people are
               doing it. Lorem{" "}

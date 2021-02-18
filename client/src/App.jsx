@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useMemo } from "react"; // User stuff
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import { Route, Switch } from "react-router-dom"; // Add Redirect after implementing user
+import { Route, Switch } from "react-router-dom";
 import Home from "./screens/Home/Home";
 import SignIn from "./screens/SignIn/SignIn";
 import SignOut from "./screens/SignOut/SignOut";
@@ -9,8 +9,7 @@ import Listings from "./screens/Listings/Listings";
 import ListingCreate from "./screens/ListingCreate/ListingCreate";
 import ListingEdit from "./screens/ListingEdit/ListingEdit";
 import ListingDetail from "./screens/ListingDetail/ListingDetail";
-import { verifyUser } from "./services/user"; // User Stuff
-//import { UserContext } from "./utilities/userContext";
+import { verifyUser } from "./services/user";
 import About from "./screens/About/About";
 import Buy from "./screens/Buy/Buy";
 import UserListings from "./screens/UserListings/UserListings";
@@ -18,7 +17,6 @@ import UserListings from "./screens/UserListings/UserListings";
 const App = () => {
   const [user, setUser] = useState(null);
   const clearUser = () => setUser(null);
-  //const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser();
@@ -30,7 +28,6 @@ const App = () => {
   return (
     <div className="App">
       <Switch>
-        {/* <UserContext.Provider value={providerValue}> */}
         <Route exact path="/">
           <Home user={user} />
         </Route>
@@ -55,7 +52,6 @@ const App = () => {
         <Route exact path="/listing/:id">
           <ListingDetail user={user} />
         </Route>
-        {/* </UserContext.Provider> */}
         <Route exact path="/about">
           <About user={user} />
         </Route>
