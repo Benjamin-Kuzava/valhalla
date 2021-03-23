@@ -4,6 +4,7 @@
 
 This full stack MERN application allows users to browse a list of private islands for purchasing. General users will have the ability to browse and select islands, while authenticated users can create, update, and delete their products from the inventory. The goal of the site design is to be minimal, letting the images drive the page.
 
+### Live site https://musing-easley-0efe4b.netlify.app/
 ## Whimsical Diagram
 
 [Click to view Whimsical](https://whimsical.com/p3-valhalla-UB6fmNiCVZ8fvwW4SZkdcx)
